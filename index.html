@@ -8,11 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FoodFit</title>
-</head>
-<body>
+
+    <script type="text/x-handlebars-template" id="recipe-template">
+
+    </script>
+    <body>
+    </head>
     <h1>FoodFit</h1>
     <nav>
-    <ul id="nav">
+    <ul id="nav"> 
         <li><a href="/"> Home</a></li>
         <li><a href="/about">About Us</a></li>
         <li><a href="/food-search">Recipe Search</a></li>
@@ -30,10 +34,10 @@
 
     <section id="foodSearch-view" class="view">
         <form action="submit">
-            <input type="text" placeholder="Search for ingredient" id="food">
+            <input type="text" placeholder="Search for ingredient" id="food" required>
             <input type="text" placeholder="min Calories" id="minCal">
             <input type="text" placeholder="max Calories" id="maxCal">
-            <select name="Dietary Restrictions" id="healthLabel">
+            <select id="healthLabel">
                 <option selected disabled>Select One</option>
                 <option value="gluten-free">gluten-free</option>
                 <option value="kosher">Kosher</option>
@@ -42,8 +46,8 @@
                 <option value="tree-nut-free">no tree nuts</option>
                 <option value="vegan">vegan</option>
                 <option value="vegetarian">vegetarian</option>
-                <input type="submit" id="foodSearch-submit">
             </select>
+            <input type="submit" id="foodSearch-submit">
         </form>
     </section>
 
