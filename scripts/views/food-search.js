@@ -6,14 +6,15 @@ var app = app || {};
 
     const $view = $('#foodSearch-view')
 
-    foodSearchView.init = () => {$view.show()
-        $('foodSearch-submit').one('click', (e) => {
-            e.preventDefault()
-            submit()
+    foodSearchView.init = () => {
+        $view.show()
+        $('foodSearch-submit').one('submit', (e) => {
+            e.preventDefault();
+            search();
         })
     }
 
-    function submit(){
+    function search(){
         let meal = {
             food: $('#food').val(),
             minCal: $('#minCal').val(),
