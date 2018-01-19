@@ -15,4 +15,8 @@ page('/food-search', () => {
   app.foodSearchView.init()
 })
 
+page('/activity-search', () => {
+    app.activitySearchView.init()
+  })
+
 page.start();
