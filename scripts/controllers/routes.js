@@ -1,11 +1,18 @@
-
 page('/*', (ctx, next) => {
-    $('.page').hide();
+    $('.view').hide();
     next();
   });
   
-  page('/', () => {
-      app.recipes.initHome()
-  })
+page('/', () => {
+    app.homeView.init()
+})
 
-  page.start();
+page('/about', () => {
+  app.aboutView.init()
+})
+
+page('/food-search', () => {
+  app.foodSearchView.init()
+})
+
+page.start();
