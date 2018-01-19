@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FoodFit</title>
+</head>
+<body>
+    <nav>
+    <ul id="nav">
+        <li><a href="/"> Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/food-search">Recipe Search</a></li>
+        <li><a href="/activity-search">Activity Search</a></li>
+    </ul>
+    </nav>
+    
+    <section id="home-view" class="view">
+        <h1>FoodFit</h1>
+        <p>This is a description of the FoodFit app. Your conjecture is totally wrong, I assure you. If I can perceive her regard for him, he must be a simpleton, indeed, not to discover it too. Those were your words.</p>
+    </section>
+
+    <section id="about-view" class="view">
+        This page is about us.
+    </section>
+
+    <section id="foodSearch-view" class="view">
+        <form action="submit">
+            <input type="text" placeholder="Search for ingredient">
+            <input type="text" placeholder="max Calories">
+            <input type="text" placeholder="min Calories">
+            
+        </form>
+    </section>
+
+    <section id="activitySearch-view" class="view">
+            <form action="submit">
+                <input type="text" placeholder="Search for activity">
+            </form>
+    </section>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+<script src="scripts/models/recipes.js"></script>
+<script src="scripts/views/about-us.js"></script>
+<script src="scripts/views/activity-results.js"></script>
+<script src="scripts/views/activity-search.js"></script>
+<script src="scripts/views/food-results.js"></script>
+<script src="scripts/views/food-search.js"></script>
+<script src="scripts/views/home.js"></script>
+<script src="scripts/views/login.js"></script>
+<script src="scripts/controllers/routes.js"></script>
+</body>
+</html>
