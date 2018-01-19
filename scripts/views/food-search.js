@@ -18,9 +18,10 @@ var app = app || {};
             food: $('#food').val(),
             minCal: $('#minCal').val(),
             maxCal: $('#maxCal').val(),
-            healthLable: $('healthLable').val(),
+            healthLabel: $('healthLabel').val(),
         }
-        app.Recipe.fetch(meal)
+        console.log(meal)
+        app.Recipe.get(meal)
         .then(() => page('/food-results'))
     }
 

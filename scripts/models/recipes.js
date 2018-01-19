@@ -2,12 +2,14 @@ var app = app || {};
 
 (module => { 
 
+    Recipe.all = []
+    
     function Recipe(){
 
     }
 
-    Recipe.fetch = meal => {
-       return $.getJSON(meal)
+    Recipe.get = meal => {
+       return $.get(meal)
     }
 
     module.Recipe = Recipe
