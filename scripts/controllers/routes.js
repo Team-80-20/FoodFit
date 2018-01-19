@@ -15,6 +15,10 @@ page('/food-search', () => {
   app.foodSearchView.init()
 })
 
+page('/food-results', () => {
+  app.foodSearchView.init()
+})
+
 page('/activity-search', () => {
     app.activitySearchView.init()
   })
