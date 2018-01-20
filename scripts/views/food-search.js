@@ -8,7 +8,7 @@ var app = app || {};
 
     foodSearchView.init = () => {
         $view.show()
-        $('foodSearch-submit').one('submit', (e) => {
+        $('#foodSearch-submit').one('click', (e) => {
             e.preventDefault();
             search();
         })
@@ -19,7 +19,7 @@ var app = app || {};
             food: $('#food').val(),
             minCal: $('#minCal').val(),
             maxCal: $('#maxCal').val(),
-            healthLabel: $('healthLabel').val(),
+            healthLabel: $('#healthLabel').val(),
         }
         console.log(meal)
         app.Recipe.get(meal)

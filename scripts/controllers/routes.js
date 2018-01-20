@@ -16,7 +16,7 @@ page('/food-search', () => {
 })
 
 page('/food-results', () => {
-  app.foodSearchView.init()
+  app.foodResultsView.init()
 })
 
 page('/activity-search', () => {
