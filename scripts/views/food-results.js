@@ -6,7 +6,9 @@ var app = app || {};
 
     const $view = $('#foodResults-view')
 
-    foodResultsView.init = () => $view.show()
+    foodResultsView.init = () =>{
+        $view.show()
+    }
 
     module.foodResultsView = foodResultsView
 
