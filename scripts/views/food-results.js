@@ -7,15 +7,13 @@ var app = app || {};
     const $view = $('#foodResults-view')
 
     foodResultsView.init = () =>{
-        $view.show()
-
-        // Recipe.prototype.toHtml = function() {
-        //     let template = Handlebars.compile($('#recipe-template').text());       
-        //     return template(this);
-        //   };
-
-        // app.recipeResults.forEach(recipeResult => $('#').append(recipe.toHtml()));
-    }
+        let template = Handlebars.compile($('#recipe-template').text());       
+        app.recipeResults.forEach(item => {
+        let newResult = template(item)
+        $('#foodResults-view').append(newResult)
+    })
+    $view.show()
+}
 
     module.foodResultsView = foodResultsView
 
