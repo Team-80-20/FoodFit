@@ -40,11 +40,11 @@ var app = app || {};
         this.source = item.recipe.source
         this.url = item.recipe.url
         this.ingredientLines = item.recipe.ingredientLines
-        this.calories = item.recipe.calories
-        this.totalNutrients = item.recipe.totalNutrients
-        this.FAT = item.recipe.totalNutrients.FAT.quantity
-        this.CHOCDF = item.recipe.totalNutrients.CHOCDF.quantity
-        this.PROCNT = item.recipe.totalNutrients.PROCNT.quantity        
+        this.calories = Math.round(item.recipe.calories)
+        this.servCalories = Math.round(item.recipe.calories / item.recipe.yield)
+        this.servFat = Math.round(item.recipe.totalNutrients.FAT.quantity / item.recipe.yield)
+        this.servCarb = Math.round(item.recipe.totalNutrients.CHOCDF.quantity / item.recipe.yield)
+        this.servPro = Math.round(item.recipe.totalNutrients.PROCNT.quantity / item.recipe.yield)
     }
 
     module.foodSearchView = foodSearchView
