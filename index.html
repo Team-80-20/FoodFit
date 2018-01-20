@@ -14,8 +14,25 @@
     <meta property="og:image" content="" />
 
     <script type="text/x-handlebars-template" id="recipe-template">
-
+        <div>
+            <h3 class="label">{{label}}</h3>
+            <img src="{{image}}" alt="Photo of {{label}}" >
+            <p class="source">Recipe from: {{source}}</p>
+            <p class="yield">Number of Servings: {{yield}}</p>
+            <ul id="ingredients">Ingredients:
+                
+            </ul>
+            <ul id="nutrition">Nutrition:
+                <p>Calories per serving: {{calories}} Cal</p>
+                <li>{{FAT}}</li>
+                <li>{{CHOCDF}}</li>
+                <li>{{PROCNT}}</li>            
+            </ul>
+            <a href="{{url}}" class="url">Directions on how to cook this meal.</a>
+        </div>        
     </script>
+
+
     <body>
     </head>
     <h1>FoodFit</h1>
@@ -57,6 +74,7 @@
 
     <section id="foodResults-view" class="view">
         <h2>Recipes</h2>
+
     </section>
 
     <section id="activitySearch-view" class="view">
