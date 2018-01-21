@@ -1,6 +1,6 @@
 page('/*', (ctx, next) => {
-    $('.view').hide();
-    next();
+    $('.view').hide()
+    next()
   });
   
 page('/', () => {
@@ -17,6 +17,10 @@ page('/food-search', () => {
 
 page('/food-results', () => {
   app.foodResultsView.init()
+})
+
+page('/recipe-box', () => {
+  app.recipeBoxView.init()
 })
 
 page('/activity-search', () => {

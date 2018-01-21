@@ -4,17 +4,21 @@ var app = app || {};
     var recipeResults = []
     
     const foodSearchView= {}
-
+    
     const $view = $('#foodSearch-view')
-
+    
     foodSearchView.init = () => {
+        if (recipeResults.length > 0){
+            recipeResults = []
+        }
         $view.show()
         $('#foodSearch-submit').one('click', (e) => {
-            e.preventDefault();
-            search();
+            e.preventDefault()
+           
+            search()
         })
     }
-
+    
     function search(){
         let meal = {
             food: $('#food').val(),
@@ -27,10 +31,12 @@ var app = app || {};
             let newRec = new RecipeObj(hit)
         }))
         .then(() => page('/food-results'))
+        .then($('#food').val(''), $('#minCal').val(''), $('#maxCal').val(''), $('#healthLabel').val(''))
     }
     
-    
+
     function RecipeObj(item) {
+        if(item){
         this.label = item.recipe.label
         this.yield = item.recipe.yield
         this.image = item.recipe.image
@@ -43,7 +49,8 @@ var app = app || {};
         this.servCarb = Math.round(item.recipe.totalNutrients.CHOCDF.quantity / item.recipe.yield)
         this.servPro = Math.round(item.recipe.totalNutrients.PROCNT.quantity / item.recipe.yield)
         recipeResults.push(this)
-        this.id = recipeResults.length -1
+         this.id = recipeResults.length -1
+        }
     }
     
     module.recipeResults = recipeResults

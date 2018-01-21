@@ -12,8 +12,6 @@ var app = app || {};
        return $.get('http://localhost:3000/search', meal)
     }
 
-
-
     module.Recipe = Recipe
 
 })(app)
