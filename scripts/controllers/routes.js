@@ -1,6 +1,6 @@
 page('/*', (ctx, next) => {
-    $('.view').hide();
-    next();
+    $('.view').hide()
+    next()
   });
   
 page('/', () => {

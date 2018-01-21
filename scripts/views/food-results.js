@@ -7,14 +7,18 @@ var app = app || {};
     const $view = $('#foodResults-view')
 
     foodResultsView.init = () =>{
-        let template = Handlebars.compile($('#recipe-template').text());       
-        app.recipeResults.forEach(item => {
-        let newResult = template(item)
-        $('#foodResults-view').append(newResult)
-    })
+        let resultsRecipe = app.recipeResults
+        $('#foodResults-view').empty()
+        let template = Handlebars.compile($('#recipe-template').text())      
+        resultsRecipe.forEach(item => {
+            let newResult = template(item)
+            $('#foodResults-view').append(newResult)
+        })
+        console.log('results page results:', app.recipeResults)
     $('.recipe-div').on('click', '.save-recipe', (e) => {
         const id = $(e.target).data('id')
         saveRecipe(app.recipeResults[id])
+        page('/recipe-box')
     })
     $view.show()
 }
