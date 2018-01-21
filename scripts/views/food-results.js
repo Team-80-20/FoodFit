@@ -14,7 +14,6 @@ var app = app || {};
     })
     $('.recipe-div').on('click', '.save-recipe', (e) => {
         const id = $(e.target).data('id')
-        console.log('clicked!', id)
         saveRecipe(app.recipeResults[id])
     })
     $view.show()

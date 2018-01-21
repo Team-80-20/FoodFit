@@ -19,6 +19,10 @@ page('/food-results', () => {
   app.foodResultsView.init()
 })
 
+page('/recipe-box', () => {
+  app.recipeBoxView.init()
+})
+
 page('/activity-search', () => {
     app.activitySearchView.init()
   })
