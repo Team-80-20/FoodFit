@@ -6,6 +6,9 @@ var app = app || {};
 
     const $view = $('#foodResults-view')
 
+    var recipeResults = []
+
+
     foodResultsView.init = () =>{
         let resultsRecipe = app.recipeResults
         $('#foodResults-view').empty()
@@ -32,6 +35,7 @@ function saveRecipe(recipeResult) {
     storedRecipes.push(JSON.stringify(recipeResult))
     localStorage.setItem('recipeBox', JSON.stringify(storedRecipes)
 )}
+    module.recipeResults = recipeResults
 
     module.foodResultsView = foodResultsView
 

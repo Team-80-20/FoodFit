@@ -1,15 +1,14 @@
 var app = app || {};
 
 (module => { 
-    var recipeResults = []
     
     const foodSearchView= {}
     
     const $view = $('#foodSearch-view')
     
     foodSearchView.init = () => {
-        if (recipeResults.length > 0){
-            recipeResults = []
+        if (app.recipeResults.length > 0){
+            app.recipeResults = []
         }
         $view.show()
         $('#foodSearch-submit').one('click', (e) => {
@@ -36,7 +35,6 @@ var app = app || {};
     
 
     function RecipeObj(item) {
-        if(item){
         this.label = item.recipe.label
         this.yield = item.recipe.yield
         this.image = item.recipe.image
@@ -48,12 +46,10 @@ var app = app || {};
         this.servFat = Math.round(item.recipe.totalNutrients.FAT.quantity / item.recipe.yield)
         this.servCarb = Math.round(item.recipe.totalNutrients.CHOCDF.quantity / item.recipe.yield)
         this.servPro = Math.round(item.recipe.totalNutrients.PROCNT.quantity / item.recipe.yield)
-        recipeResults.push(this)
-         this.id = recipeResults.length -1
-        }
+        app.recipeResults.push(this)
+         this.id = app.recipeResults.length -1
     }
     
-    module.recipeResults = recipeResults
     module.foodSearchView = foodSearchView
 
 })(app)
