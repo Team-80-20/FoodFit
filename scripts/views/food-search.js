@@ -36,7 +36,6 @@ var app = app || {};
     
 
     function RecipeObj(item) {
-        if(item){
         this.label = item.recipe.label
         this.yield = item.recipe.yield
         this.image = item.recipe.image
@@ -50,7 +49,6 @@ var app = app || {};
         this.servPro = Math.round(item.recipe.totalNutrients.PROCNT.quantity / item.recipe.yield)
         recipeResults.push(this)
          this.id = recipeResults.length -1
-        }
     }
     
     module.recipeResults = recipeResults
