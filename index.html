@@ -14,7 +14,7 @@
     <meta property="og:image" content="" />
 
     <script type="text/x-handlebars-template" id="recipe-template">
-        <div data-id="{{id}}">
+        <div class="recipe-div">
             <h3 class="label">{{label}}</h3>
             <img src="{{image}}" alt="Photo of {{label}}" >
             <p class="source">Recipe from: {{source}}</p>
@@ -29,7 +29,7 @@
                 <li>Protein: {{servPro}}g</li>            
             </ul>
             <a href="{{url}}" class="url">Directions on how to cook this meal.</a>
-            <button type="click" id="save-recipe">Save Recipe</button>
+            <button data-id="{{id}}" class="save-recipe">Save Recipe</button>
         </div>        
     </script>
 

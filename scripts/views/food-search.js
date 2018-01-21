@@ -1,7 +1,8 @@
 var app = app || {};
 
 (module => { 
-
+    var recipeResults = []
+    
     const foodSearchView= {}
 
     const $view = $('#foodSearch-view')
@@ -21,16 +22,13 @@ var app = app || {};
             maxCal: $('#maxCal').val(),
             healthLabel: $('#healthLabel').val(),
         }
-        console.log(meal)
         app.Recipe.get(meal)
         .then(data => data.hits.forEach(hit => {
             let newRec = new RecipeObj(hit)
         }))
         .then(() => page('/food-results'))
-        console.log(recipeResults)
     }
     
-    var recipeResults = []
     
     function RecipeObj(item) {
         this.label = item.recipe.label
