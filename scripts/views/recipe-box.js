@@ -20,6 +20,17 @@ var app = app || {};
         $('#recipe-box').append(newResult)
         $('.save-recipe').hide()
     })
+    // $('.recipe-div').on('click', '.delete-recipe', (e) => {
+    //     const id = $(e.target).data('id')
+    //     let storedRecipe = JSON.parse(localStorage.getItem('recipeBox'))
+    //     let parsedRecipe = []
+    //     storedRecipe.forEach(item =>{
+    //         parsedRecipe.push(JSON.parse(item))
+    //     })
+    //     let newBox = parsedRecipe.splice(id, 1)
+    //     localStorage.setItem('recipeBox', JSON.stringify(newBox)
+    //     page('/recipe-box')
+    // })
     $view.show()
 }
 

@@ -29,7 +29,9 @@
                 <li>Protein: {{servPro}}g</li>            
             </ul>
             <a href="{{url}}" class="url">Make This Meal!</a>
-            <button data-id="{{id}}" class="save-recipe">Save Recipe</button>
+            <button data-id="{{id}}" id="save-recipe-{{id}}" class="save-recipe">Save Recipe</button>
+            <p class="saved" id="saved-{{id}}">Recipe Saved!</p>
+            <button data-id="{{id}}" class="delete-recipe">Delete Recipe</button>
         </div>        
     </script>
 
