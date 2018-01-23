@@ -20,3 +20,34 @@ hr{
     padding-bottom: 4%;
   
 }
+
+section{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.thumbnail{
+    border: #6c6b6b 1px solid;
+    border-radius: 30px;
+    margin: 2%;
+    overflow: hidden;
+    position: relative;
+}
+
+.recipe-img{
+    width: 100%;
+}
+
+.label{
+    color: white;
+    padding: 4% 20% 4% 0%;
+    font-size: 1.5em;
+    text-align: right;
+}
+
+.title-background{
+    position: absolute;
+    min-height: 10%;
+    width: 95%;
+    background: linear-gradient(to top, rgba(108,107,107,0), rgba(108,107,107,1));
+}
