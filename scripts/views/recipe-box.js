@@ -22,17 +22,21 @@ var app = app || {};
     })
     // $('.recipe-div').on('click', '.delete-recipe', (e) => {
     //     const id = $(e.target).data('id')
-    //     let storedRecipe = JSON.parse(localStorage.getItem('recipeBox'))
-    //     let parsedRecipe = []
-    //     storedRecipe.forEach(item =>{
-    //         parsedRecipe.push(JSON.parse(item))
-    //     })
-    //     let newBox = parsedRecipe.splice(id, 1)
-    //     localStorage.setItem('recipeBox', JSON.stringify(newBox)
+    //     let currentBox = JSON.parse(localStorage.getItem('recipeBox'))
+    //     updateBox(currentBox)
     //     page('/recipe-box')
     // })
     $view.show()
 }
+
+// function updateBox(recipeBox) {
+//     let parsedBox = []
+//     recipeBox.forEach(item =>{
+//         parsedBox.push(JSON.parse(item))
+//     })
+//     let newBox = parsedBox.splice(id, 1)
+//     localStorage.setItem('recipeBox', JSON.stringify(newBox)
+// )}
 
     module.recipeBoxView = recipeBoxView
 
