@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
@@ -16,7 +17,7 @@
     <script type="text/x-handlebars-template" id="recipe-template">
         <div class="recipe-div">
             <h3 class="label">{{label}}</h3>
-            <img src="{{image}}" alt="Photo of {{label}}" >
+            <img src="{{image}}" alt="Photo of {{label}}">
             <p class="source">Recipe from: {{source}}</p>
             <p class="yield">Number of Servings: {{yield}}</p>
             <ul class="ingredients">Ingredients:
@@ -26,105 +27,150 @@
                 <p>Calories per serving: {{servCalories}}</p>
                 <li>Fat: {{servFat}}g</li>
                 <li>Carbohydrates: {{servCarb}}g</li>
-                <li>Protein: {{servPro}}g</li>            
+                <li>Protein: {{servPro}}g</li>
             </ul>
             <a href="{{url}}" class="url">Make This Meal!</a>
             <button data-id="{{id}}" class="save-recipe">Save Recipe</button>
-        </div>        
+        </div>
     </script>
 
 
 
     <body>
-    </head>
-    <h1>FoodFit</h1>
-    <nav>
-    <ul id="nav"> 
-        <li><a href="/"> Home</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/food-search">Recipe Search</a></li>
-        <li><a href="/activity-search">Activity Search</a></li>
-        <li><a href="/recipe-box">Recipe Box</a></li>      
+</head>
+<h1>FoodFit</h1>
+<nav>
+    <ul id="nav">
+        <li>
+            <a href="/"> Home</a>
+        </li>
+        <li>
+            <a href="/about">About Us</a>
+        </li>
+        <li>
+            <a href="/food-search">Recipe Search</a>
+        </li>
+        <li>
+            <a href="/activity-search">Activity Search</a>
+        </li>
+        <li>
+            <a href="/recipe-box">Recipe Box</a>
+        </li>
     </ul>
-    </nav>
-    <section id="recipe-box" class="view">
-            Recipe Box
-        </section>
-    
-    <section id="home-view" class="view">
-        <p>This is a description of the FoodFit app. Your conjecture is totally wrong, I assure you. If I can perceive her regard for him, he must be a simpleton, indeed, not to discover it too. Those were your words.</p>
-    </section>
+</nav>
+<section id="recipe-box" class="view">
+    Recipe Box
+</section>
 
-    <section id="about-view" class="view">
-        This page is about us. We are awesome.
-    </section>
+<section id="home-view" class="view">
+    <p>This is a description of the FoodFit app. Your conjecture is totally wrong, I assure you. If I can perceive her regard
+        for him, he must be a simpleton, indeed, not to discover it too. Those were your words.</p>
+</section>
 
-    <section id="foodSearch-view" class="view">
-        <form id="search-form">
-            <input type="text" placeholder="Search for ingredient" id="food" required>
-            <input type="text" placeholder="min Calories" id="minCal" required>
-            <input type="text" placeholder="max Calories" id="maxCal" required>
-            <select id="healthLabel">
-                <option selected disabled>Select One</option>
-                <option value="&health=peanut-free">no peanuts</option>
-                <option value="&health=tree-nut-free">no tree nuts</option>
-                <option value="&health=vegan">vegan</option>
-                <option value="&health=vegetarian">vegetarian</option>
-            </select>
-            <button type="click" id="foodSearch-submit">Submit</button>
-        </form>
-    </section>
+<section id="about-view" class="view">
+    <p>The Food Fit app was created by CodeFellows 301 students using the www.edamam.com site as a 3rd party API, to build a single page style website with mobile first design.<br>Meet our fantasitc team!</p>
 
-    <section id="foodResults-view" class="view">
-        <h2>Recipes</h2>
+    <div id="aa">
+        <h2 class="name">Ariel Altaras</h2>
+        <div id="aapic">
+            <img src="" alt="">
+        </div>
 
-    </section>
+        <p id="aap">
 
-    <section id="activitySearch-view" class="view">
-            <form>
-                    <select id="activity-search">
-                        <option selected disabled>Select One</option>
-                        <option value="fun">fun</option>
-                        <option value="character">character</option>
-                        <option value="superhero">superhero</option>
-                        <option value="superheroine">superheroine</option>
-                    </select>
-                <button type="click" id="activitySearch-submit">Submit</button>
-            </form>
-   
-        <img class="fun" src="activityImg/breathless.jpg" alt="breathless">
-        <img class="fun" src="activityImg/fast-and-furious.jpg" alt="fast-and-furious">
-        <img class="fun" src="activityImg/make-me-a-sandwich.jpg" alt="sandwich">
-        <img class="fun" src="activityImg/movie-night.jpg" alt="movie-night">
-        <img class="fun" src="activityImg/office.jpg" alt="office">
-        <img class="fun" src="activityImg/stretch.jpg" alt="stretch">
-        <img class="fun" src="activityImg/tv.jpg" alt="tv">
-        <img class="fun" src="activityImg/wall-hugger.jpg" alt="wall-hugger">
-        <img class="character" src="activityImg/bruce-lee.jpg" alt="bruce-lee">
-        <img class="character" src="activityImg/fireman.jpg" alt="fireman">
-        <img class="character" src="activityImg/jedi.jpg" alt="jedi">
-        <img class="character" src="activityImg/lara-croft.jpg" alt="lara-croft">
-        <img class="character" src="activityImg/mermaid.jpg" alt="mermaid">
-        <img class="character" src="activityImg/ninja.jpg" alt="ninja">
-        <img class="character" src="activityImg/pirate.jpg" alt="pirate">
-        <img class="character" src="activityImg/storm-trooper.jpg" alt="storm-trooper">
-        <img class="superheroine" src="activityImg/bat-girl.jpg" alt="bat-girl">
-        <img class="superhero" src="activityImg/black-panther.jpg" alt="black-panther">
-        <img class="superheroine" src="activityImg/black-widow.jpg" alt="black-widow">
-        <img class="superhero" src="activityImg/captin-america.jpg" alt="captin-america">
-        <img class="superheroine" src="activityImg/cat-woman.jpg" alt="cat-woman">
-        <img class="superhero" src="activityImg/dare-devil.jpg" alt="dare-devil">
-        <img class="superhero" src="activityImg/flash.jpg" alt="flash">
-        <img class="superheroine" src="activityImg/harley-quinn.jpg" alt="harley-quinn">
-        <img class="superhero" src="activityImg/ironman.jpg" alt="ironman">
-        <img class="superheroine" src="activityImg/ivy.jpg" alt="ivy">
-        <img class="superhero" src="activityImg/joker.jpg" alt="joker">
-        <img class="superheroine" src="activityImg/raven.jpg" alt="raven">
-        <img class="superheroine" src="activityImg/super-girl.jpg" alt="super-girl">
-        <img class="superhero" src="activityImg/superman.jpg" alt="superman">
-        <img class="superhero" src="activityImg/thor.jpg" alt="thor">
-        <img class="superheroine" src="activityImg/wonder-woman.jpg" alt="wonder-woman">
-    </section>
+        </p>
+    </div>
+
+    <div id="dc">
+        <h2 class="name">Devin Cunningham</h2>
+        <div id="dcpic">
+            <img src="" alt="">
+        </div>
+
+        <p id="dcp">
+
+        </p>
+    </div>
+    <div id="rj">
+        <h2 class="name">Ryan Johnson</h2>
+        <div id="rjpic">
+            <img src="" alt="">
+        </div>
+
+        <p id="rjp"> Ryan PE teacher by day amateur web developer by night. Father of two, husband of 10 years, sacrificing sleep and
+            sanity to change careers for my family; thank goodness for coffee. Code is a new passion and interest discovered
+            through Code Fellows 101 introduction to web development class. Ryan has been hooked ever sense and excited about
+            this new adventure in life.
+        </p>
+    </div>
+</section>
+
+<section id="foodSearch-view" class="view">
+    <form id="search-form">
+        <input type="text" placeholder="Search for ingredient" id="food" required>
+        <input type="text" placeholder="min Calories" id="minCal" required>
+        <input type="text" placeholder="max Calories" id="maxCal" required>
+        <select id="healthLabel">
+            <option selected disabled>Select One</option>
+            <option value="&health=peanut-free">no peanuts</option>
+            <option value="&health=tree-nut-free">no tree nuts</option>
+            <option value="&health=vegan">vegan</option>
+            <option value="&health=vegetarian">vegetarian</option>
+        </select>
+        <button type="click" id="foodSearch-submit">Submit</button>
+    </form>
+</section>
+
+<section id="foodResults-view" class="view">
+    <h2>Recipes</h2>
+
+</section>
+
+<section id="activitySearch-view" class="view">
+    <form>
+        <select id="activity-search">
+            <option selected disabled>Select One</option>
+            <option value="fun">fun</option>
+            <option value="character">character</option>
+            <option value="superhero">superhero</option>
+            <option value="superheroine">superheroine</option>
+        </select>
+        <button type="click" id="activitySearch-submit">Submit</button>
+    </form>
+
+    <img class="fun" src="activityImg/breathless.jpg" alt="breathless">
+    <img class="fun" src="activityImg/fast-and-furious.jpg" alt="fast-and-furious">
+    <img class="fun" src="activityImg/make-me-a-sandwich.jpg" alt="sandwich">
+    <img class="fun" src="activityImg/movie-night.jpg" alt="movie-night">
+    <img class="fun" src="activityImg/office.jpg" alt="office">
+    <img class="fun" src="activityImg/stretch.jpg" alt="stretch">
+    <img class="fun" src="activityImg/tv.jpg" alt="tv">
+    <img class="fun" src="activityImg/wall-hugger.jpg" alt="wall-hugger">
+    <img class="character" src="activityImg/bruce-lee.jpg" alt="bruce-lee">
+    <img class="character" src="activityImg/fireman.jpg" alt="fireman">
+    <img class="character" src="activityImg/jedi.jpg" alt="jedi">
+    <img class="character" src="activityImg/lara-croft.jpg" alt="lara-croft">
+    <img class="character" src="activityImg/mermaid.jpg" alt="mermaid">
+    <img class="character" src="activityImg/ninja.jpg" alt="ninja">
+    <img class="character" src="activityImg/pirate.jpg" alt="pirate">
+    <img class="character" src="activityImg/storm-trooper.jpg" alt="storm-trooper">
+    <img class="superheroine" src="activityImg/bat-girl.jpg" alt="bat-girl">
+    <img class="superhero" src="activityImg/black-panther.jpg" alt="black-panther">
+    <img class="superheroine" src="activityImg/black-widow.jpg" alt="black-widow">
+    <img class="superhero" src="activityImg/captin-america.jpg" alt="captin-america">
+    <img class="superheroine" src="activityImg/cat-woman.jpg" alt="cat-woman">
+    <img class="superhero" src="activityImg/dare-devil.jpg" alt="dare-devil">
+    <img class="superhero" src="activityImg/flash.jpg" alt="flash">
+    <img class="superheroine" src="activityImg/harley-quinn.jpg" alt="harley-quinn">
+    <img class="superhero" src="activityImg/ironman.jpg" alt="ironman">
+    <img class="superheroine" src="activityImg/ivy.jpg" alt="ivy">
+    <img class="superhero" src="activityImg/joker.jpg" alt="joker">
+    <img class="superheroine" src="activityImg/raven.jpg" alt="raven">
+    <img class="superheroine" src="activityImg/super-girl.jpg" alt="super-girl">
+    <img class="superhero" src="activityImg/superman.jpg" alt="superman">
+    <img class="superhero" src="activityImg/thor.jpg" alt="thor">
+    <img class="superheroine" src="activityImg/wonder-woman.jpg" alt="wonder-woman">
+</section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
@@ -140,4 +186,5 @@
 <script src="scripts/views/recipe-box.js"></script>
 <script src="scripts/controllers/routes.js"></script>
 </body>
+
 </html>
