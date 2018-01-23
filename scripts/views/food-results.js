@@ -11,17 +11,24 @@ var app = app || {};
 
     foodResultsView.init = () =>{
         let resultsRecipe = app.recipeResults
+        if (resultsRecipe.length > 0) {
         $('#foodResults-view').empty()
         let template = Handlebars.compile($('#recipe-template').text())      
         resultsRecipe.forEach(item => {
             let newResult = template(item)
             $('#foodResults-view').append(newResult)
-        })
-        console.log('results page results:', app.recipeResults)
+            $('.delete-recipe').hide()
+            $('.saved').hide()
+            $('#no-recipes').hide()
+        })}
+        else {
+        $('#no-recipes').show()
+        }
     $('.recipe-div').on('click', '.save-recipe', (e) => {
         const id = $(e.target).data('id')
         saveRecipe(app.recipeResults[id])
-        page('/recipe-box')
+        $(`#save-recipe-${id}`).hide()
+        $(`#saved-${id}`).show()
     })
     $view.show()
 }

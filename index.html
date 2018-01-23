@@ -32,8 +32,11 @@
                 <li>Protein: {{servPro}}g</li>
             </ul>
             <a href="{{url}}" class="url">Make This Meal!</a>
-            <button data-id="{{id}}" class="save-recipe">Save Recipe</button>
-        </div>
+            <button data-id="{{id}}" id="save-recipe-{{id}}" class="save-recipe">Save Recipe</button>
+            <p class="saved" id="saved-{{id}}">Recipe Saved!</p>
+            <button data-id="{{id}}" class="delete-recipe">Delete Recipe</button>
+        </div>        
+
     </script>
 
 
@@ -68,6 +71,12 @@
 
 <section id="about-view" class="view">
     <h3>The Food Fit app was created by CodeFellows 301 students using the www.edamam.com site as a 3rd party API (Thank's Edamam!), to build a single page style website with mobile first design.<br>Meet our fantasitc team!</h3>
+
+
+    <section id="foodResults-view" class="view">
+        <h2>Recipes</h2>
+        <p id="no-recipes">Sorry, your search did not return any results. Please widen your parameters and try again.</p>
+    </section>
 
     <div id="ariel">
         <h2 class="name">Ariel Altaras</h2>
@@ -116,11 +125,6 @@
         </select>
         <button type="click" id="foodSearch-submit">Submit</button>
     </form>
-</section>
-
-<section id="foodResults-view" class="view">
-    <h2>Recipes</h2>
-
 </section>
 
 <section id="activitySearch-view" class="view">
