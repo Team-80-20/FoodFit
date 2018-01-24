@@ -19,6 +19,7 @@ var app = app || {};
         let newResult = template(item)
         $('#recipe-box').append(newResult)
         $('.save-recipe').hide()
+        $('.saved').hide()
     })
     // $('.recipe-div').on('click', '.delete-recipe', (e) => {
     //     const id = $(e.target).data('id')
