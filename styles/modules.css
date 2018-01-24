@@ -9,7 +9,7 @@
     color:#999;
     border:0;
     line-height: 67px;
-    font-size:1.4em;
+    font-size:3em;
     font-weight:bold;
     cursor:pointer;
     outline:none;
@@ -24,21 +24,21 @@
     padding:7px 15px 0px 15px;
     color:#999;
     border:0;
-    font-size:3em;
-    line-height:67px;
+    font-size:6em;
+    line-height:83px;
     font-weight:bold;
     cursor:pointer;
     outline:none;
     z-index:10000000000000;
   }
   .menu{
-    z-index:1000000;
+    z-index:1;
     font-weight:bold;
     font-size:0.8em;
     width:100%;
     background:#f1f1f1;
-    position:absolute;
-    top: 10%;
+    position:relative;
+    /* top: 10%; */
     text-align:center;
     font-size:12px;
     padding-left: 0;
@@ -73,14 +73,15 @@
     margin:0 auto;
   }
 
-  header{display:inline-block; font-size:12px;}
+  header{display:inline-block; font-size:12px; position: fixed; top: 0; z-index: 2}
   /* span{padding-left:20px;} */
   a{color:#336699;}
-
+.inner-nav{
+    background-color: white;
+}
 
     nav {
-        display: flex;
-        flex-direction: row;
+        position: relative;
         /* padding: 2%; */
         color: #999;
     } 

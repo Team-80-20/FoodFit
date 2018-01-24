@@ -17,6 +17,7 @@ var app = app || {};
         resultsRecipe.forEach(item => {
             let newResult = template(item)
             $('#foodResults-view').append(newResult)
+            $('.recipe-info').hide()
             $('.delete-recipe').hide()
             $('.saved').hide()
             $('#no-recipes').hide()
@@ -30,7 +31,21 @@ var app = app || {};
         $(`#save-recipe-${id}`).hide()
         $(`#saved-${id}`).show()
     })
-    $view.show()
+    $('.recipe-div').on('click', '.view-more', (e) => {
+        const id = $(e.target).data('id')
+        console.log(`clicked id:${id}`)
+        $(`#recipe-info-${id}`).slideToggle('slow')
+        $(`#show-id-${id}`).hide()
+        $(`#quick-view-${id}`).hide()
+    })
+    $('.recipe-div').on('click', '.view-less', (e) => {
+        const id = $(e.target).data('id')
+        console.log(`clicked id:${id}`)
+        $(`#recipe-info-${id}`).slideToggle('slow')
+        $(`#show-id-${id}`).show()
+        $(`#quick-view-${id}`).delay(300).fadeIn('slow')
+    })
+    $view.slideToggle('slow')
 }
 
 

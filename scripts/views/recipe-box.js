@@ -18,16 +18,24 @@ var app = app || {};
         parsedRecipe.forEach(item => {
         let newResult = template(item)
         $('#recipe-box').append(newResult)
+        $('.recipe-info').hide()
         $('.save-recipe').hide()
         $('.saved').hide()
+
+        $('.recipe-div').one('click', '.view-more', (e) => {
+            const id = $(e.target).data('id')
+            console.log(`clicked id:${id}`)
+            $(`#recipe-info-${id}`).slideToggle('slow')
+            $(`#show-id-${id}`).hide()
+           })
     })
+    $view.slideToggle('slow')
     // $('.recipe-div').on('click', '.delete-recipe', (e) => {
     //     const id = $(e.target).data('id')
     //     let currentBox = JSON.parse(localStorage.getItem('recipeBox'))
     //     updateBox(currentBox)
     //     page('/recipe-box')
     // })
-    $view.show()
 }
 
 // function updateBox(recipeBox) {
