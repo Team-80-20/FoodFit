@@ -20,15 +20,14 @@ var app = app || {};
         $('#recipe-box').append(newResult)
         $('.recipe-info').hide()
         $('.save-recipe').hide()
-        // $(this).delay(400000).fadeIn(300)
+        $('.saved').hide()
 
         $('.recipe-div').one('click', '.view-more', (e) => {
             const id = $(e.target).data('id')
             console.log(`clicked id:${id}`)
             $(`#recipe-info-${id}`).slideToggle('slow')
             $(`#show-id-${id}`).hide()
-    
-        })
+           })
     })
     $view.slideToggle('slow')
     // $('.recipe-div').on('click', '.delete-recipe', (e) => {
