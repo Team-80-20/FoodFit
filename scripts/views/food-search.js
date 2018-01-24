@@ -42,7 +42,7 @@ var app = app || {};
             this.image = item.recipe.image
             this.source = item.recipe.source
             this.url = item.recipe.url
-            this.ingredients = item.recipe.ingredientLines.join('</li><li>')
+            this.ingredients = item.recipe.ingredientLines.join('</li><li class="recipe-list-item">')
             this.calories = Math.round(item.recipe.calories)
             this.servCalories = Math.round(item.recipe.calories / item.recipe.yield)
             this.servFat = Math.round(item.recipe.totalNutrients.FAT.quantity / item.recipe.yield)
