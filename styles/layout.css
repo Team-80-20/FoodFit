@@ -1,12 +1,25 @@
 /* about us page */
-.name {
 
+
+#about-view {
+    padding-bottom: 5em;
+}
+
+
+.name {
+    padding: .5em;
 }
 
 #pic {
+    height: 16em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 
 }
 
 #about {
-    
+
 }
+
