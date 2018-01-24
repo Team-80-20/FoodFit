@@ -32,22 +32,14 @@ var app = app || {};
             $(`#show-id-${id}`).hide()
            })
 
-        $('.recipe-div').one('click', '.delete-recipe', (e) => {
-            const id = $(e.target).data('id')
-            console.log(`deleted id:${id}`)
-            let currentBox = []
-            if (localStorage.getItem('recipeBox')) {
-                currentBox = JSON.parse(localStorage.getItem('recipeBox'))
-            }
-            let parsedBox = []
-            currentBox.forEach(item =>{
-            parsedBox.push(JSON.parse(item))
-            })
-            let newBox = parsedBox.splice(id, 1)
-            localStorage.setItem('recipeBox', JSON.stringify(newBox))
-            console.log(newBox)
-            // page('/recipe-box')
-        })
+        // $('.recipe-div').on('click', '.delete-recipe', (e) => {
+        //     const id = $(e.target).data('id')
+        //     console.log(`deleted id:${id}`)
+        //     let newBox = app.recipeResults.splice(id, 1)
+        //     localStorage.setItem('recipeBox', JSON.stringify(newBox))
+        //     console.log(newBox)
+        //     // page('/recipe-box')
+        // })
     })
     $view.slideToggle('slow')
 }
