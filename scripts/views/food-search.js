@@ -35,21 +35,38 @@ var app = app || {};
     
 
     function RecipeObj(item) {
-        this.label = item.recipe.label
-        this.yield = item.recipe.yield
-        this.image = item.recipe.image
-        this.source = item.recipe.source
-        this.url = item.recipe.url
-        this.ingredients = item.recipe.ingredientLines.join('</li><li class="recipe-list-item">')
-        this.calories = Math.round(item.recipe.calories)
-        this.servCalories = Math.round(item.recipe.calories / item.recipe.yield)
-        this.servFat = Math.round(item.recipe.totalNutrients.FAT.quantity / item.recipe.yield)
-        this.servCarb = Math.round(item.recipe.totalNutrients.CHOCDF.quantity / item.recipe.yield)
-        this.servPro = Math.round(item.recipe.totalNutrients.PROCNT.quantity / item.recipe.yield)
+        console.log(item)
+        if (item.recipe) {
+            this.label = item.recipe.label
+            this.yield = item.recipe.yield
+            this.image = item.recipe.image
+            this.source = item.recipe.source
+            this.url = item.recipe.url
+            this.ingredients = item.recipe.ingredientLines.join('</li><li class="recipe-list-item">')
+            this.calories = Math.round(item.recipe.calories)
+            this.servCalories = Math.round(item.recipe.calories / item.recipe.yield)
+            this.servFat = Math.round(item.recipe.totalNutrients.FAT.quantity / item.recipe.yield)
+            this.servCarb = Math.round(item.recipe.totalNutrients.CHOCDF.quantity / item.recipe.yield)
+            this.servPro = Math.round(item.recipe.totalNutrients.PROCNT.quantity / item.recipe.yield)
+        }
+        else {
+            this.label = item.label
+            this.yield = item.yield
+            this.image = item.image
+            this.source = item.source
+            this.url = item.url
+            this.ingredients = item.ingredients
+            this.calories = item.calories
+            this.servCalories = item.servCalories
+            this.servFat = item.servFat
+            this.servCarb = item.servCarb
+            this.servPro = item.servPro
+        }
         app.recipeResults.push(this)
-         this.id = app.recipeResults.length -1
+        this.id = app.recipeResults.length -1
     }
     
+    module.RecipeObj = RecipeObj
     module.foodSearchView = foodSearchView
 
 })(app)
