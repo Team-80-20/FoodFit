@@ -9,11 +9,12 @@ var app = app || {};
     activitySearchView.init = () => {
         $('.activity').hide()
         
-        $('#activitySearch-submit').one('click', (e) => {
+        $('#activitySearch-submit').on('click', (e) => {
             e.preventDefault()
-
+            
             let selection = $('#activity-search').val()
-            $(`.${selection}`).show()
+            $('.activity').hide()
+            $(`.${selection}`).slideToggle('fast')
         })
         $view.slideToggle('slow')
     }

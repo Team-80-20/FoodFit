@@ -29,11 +29,22 @@ section{
 }
 
 .thumbnail{
-    border: #6c6b6b 1px solid;
+    border: #5fb4d4 4px solid;
     border-radius: 30px;
     margin: 2%;
     overflow: hidden;
     position: relative;
+    margin-bottom: 4%;
+}
+.thumbnail-activity{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: #5fb4d4 4px solid;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 4%;
+    width: 98%;
 }
 
 .recipe-img{
@@ -42,6 +53,7 @@ section{
 
 .recipe-info{
     padding: 2% 2% 2% 2%;
+    margin-bottom: 8%;
 }
 
 .quick-view-serving-background{
@@ -92,7 +104,108 @@ section{
 
 .view-more{
     position: absolute;
-    bottom: 2%;
-    left: 6%;
+    bottom: 0%;
+    left: -2%;
+    width: 30%;
+    height: 10%;
+    border-radius: 0px 15px 0px 0px;
+    background-color: #5fb4d4;
+    border: none;
+    color: white;
+    padding: 1.5px 3.2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.15em;
+}
 
+.view-less{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 28%;
+    height: 4%;
+    border-radius: 0px 15px 0px 0px;
+    background-color: #5fb4d4;
+    border: none;
+    color: white;
+    padding: 1.5px 3.2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.15em;
+}
+
+.save-recipe{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 28%;
+    height: 4%;
+    border-radius: 15px 0px 0px 0px;
+    background-color: #5fb4d4;
+    border: none;
+    color: white;
+    padding: 1.5px 3.2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.15em;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    border: solid #5fb4d4 2px;
+    border-radius: 15px;
+    line-height: 2em;
+    width: 95%;
+    margin-bottom: 8%;
+    padding-left: 4%;
+}
+
+select{
+    font-size: 1.5em;
+    width: 100%;
+    -webkit-appearance: menulist-button;
+    height: 55px;
+    border: solid #5fb4d4 2px;
+    border-radius: 15px;
+    margin-bottom: 8%;
+    padding-left: 4%;
+    
+}
+
+.submit{
+    width: 100%;
+    border-radius: 15px;
+    background-color: #5fb4d4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    margin-bottom: 4%
+}
+.recipe-list-item {
+    font-weight: 100;
+    padding-left: 6%;
+}
+
+.recipe-list {
+    font-weight: 800;
+    list-style-type: none;
+    padding-left: 1%;
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
