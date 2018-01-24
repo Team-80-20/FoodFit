@@ -10,7 +10,7 @@ var app = app || {};
         if (app.recipeResults.length > 0){
             app.recipeResults = []
         }
-        $view.show()
+        $view.slideToggle('slow')
         $('#foodSearch-submit').one('click', (e) => {
             e.preventDefault()
            

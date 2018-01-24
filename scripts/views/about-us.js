@@ -6,7 +6,7 @@ var app = app || {};
 
     const $view = $('#about-view')
 
-    aboutView.init = () => $view.show()
+    aboutView.init = () => $view.slideToggle('slow')
 
     module.aboutView = aboutView
 

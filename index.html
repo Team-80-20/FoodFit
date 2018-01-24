@@ -17,66 +17,72 @@
 
     <script type="text/x-handlebars-template" id="recipe-template">
         <div class="recipe-div thumbnail">
-            <h3 class="label title-background">{{label}}</h3>
-            <img src="{{image}}" class="recipe-img" alt="Photo of {{label}}" >
-
-            <p class="source">Recipe from: {{source}}</p>
-            <p class="yield">Number of Servings: {{yield}}</p>
-            <ul class="ingredients">Ingredients:
-                <li>{{{ingredients}}}</li>
-            </ul>
-            <ul class="nutrition">Nutrition:
-                <p>Calories per serving: {{servCalories}}</p>
-                <li>Fat: {{servFat}}g</li>
-                <li>Carbohydrates: {{servCarb}}g</li>
-                <li>Protein: {{servPro}}g</li>
-            </ul>
-            <a href="{{url}}" class="url">Make This Meal!</a>
-            <button data-id="{{id}}" id="save-recipe-{{id}}" class="save-recipe">Save Recipe</button>
-            <p class="saved" id="saved-{{id}}">Recipe Saved!</p>
-            <button data-id="{{id}}" class="delete-recipe">Delete Recipe</button>
+            <div class="image-container">
+                <h3 class="label title-background">{{label}}</h3>
+                <div class="quick-view-serving-background" id="quick-view-{{id}}"><p class="quick-view-serving">Calories per serving: {{servCalories}}</p></div>
+                <button id="show-id-{{id}}" data-id="{{id}}" class="view-more">View Info</button>                
+                <img src="{{image}}" class="recipe-img" alt="Photo of {{label}}" >
+            </div>
+            <div class="recipe-info" id="recipe-info-{{id}}">
+                <p class="yield">Number of Servings: {{yield}}</p>
+                <ul class="ingredients">Ingredients:
+                    <li>{{{ingredients}}}</li>
+                </ul>
+                <ul class="nutrition">Nutrition:
+                    <p>Calories per serving: {{servCalories}}</p>
+                    <li>Fat: {{servFat}}g</li>
+                    <li>Carbohydrates: {{servCarb}}g</li>
+                    <li>Protein: {{servPro}}g</li>
+                </ul>
+                <a href="{{url}}" class="url">Make This Meal!</a>
+                <p class="source">Recipe from: {{source}}</p>
+                <button id="show-id-{{id}}" data-id="{{id}}" class="view-less">View Less</button>                
+                <button data-id="{{id}}" id="save-recipe-{{id}}" class="save-recipe">Save Recipe</button>
+                <p class="saved" id="saved-{{id}}">Recipe Saved!</p>
+                <button data-id="{{id}}" class="delete-recipe">Delete Recipe</button>
+            </div>
         </div>        
 
     </script>
+  
 
 
 
     <body>
     </head>
-    <button class="hamburger">&#9776;</button>
-    <button class="cross">&#735;</button>
-    <a href="/"><img id="foodfit-logo" src="styles/images/FoodFIt-Logo-w-Text-Rounded-Corners.png" alt="FoodFit Logo"></a>
-    <nav>
-    <ul id="nav" class="menu"> 
-        <li><a href="/"> Home</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/food-search">Recipe Search</a></li>
-        <li><a href="/activity-search">Activity Search</a></li>
-        <li><a href="/recipe-box">Recipe Box</a></li>      
-    </ul>
-    </nav>
-    <hr>
-    <section id="recipe-box" class="view">
-            Recipe Box
-        </section>
+    <header class="outter-nav">
+        <nav class="inner-nav">
+        <button class="hamburger">&#9776;</button>
+        <button class="cross">&#735;</button>
+        <a href="/"><img id="foodfit-logo" src="styles/images/FoodFIt-Logo-w-Text-Rounded-Corners.png" alt="FoodFit Logo"></a>
+        <hr>
+        <ul id="nav" class="menu"> 
+            <li><a href="/"> Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/food-search">Recipe Search</a></li>
+            <li><a href="/activity-search">Activity Search</a></li>
+            <li><a href="/recipe-box">Recipe Box</a></li>      
+        </ul>
+        </nav>
+    </header>
+<section id="recipe-box" class="view">
+           <p>Recipe Box</p> 
+</section>
     
-    <section id="home-view" class="view">
-        <p>This is a description of the FoodFit app. Your conjecture is totally wrong, I assure you. If I can perceive her regard for him, he must be a simpleton, indeed, not to discover it too. Those were your words.</p>
-    </section>
-
 <section id="home-view" class="view">
     <p>This is a description of the FoodFit app. Your conjecture is totally wrong, I assure you. If I can perceive her regard
         for him, he must be a simpleton, indeed, not to discover it too. Those were your words.</p>
+</section>
+
+<section id="foodResults-view" class="view">
+    <h2>Recipes</h2>
+    <p id="no-recipes">Sorry, your search did not return any results. Please widen your parameters and try again.</p>
 </section>
 
 <section id="about-view" class="view">
     <h3>The Food Fit app was created by CodeFellows 301 students using the www.edamam.com site as a 3rd party API (Thank's Edamam!), to build a single page style website with mobile first design.<br>Meet our fantasitc team!</h3>
 
 
-    <section id="foodResults-view" class="view">
-        <h2>Recipes</h2>
-        <p id="no-recipes">Sorry, your search did not return any results. Please widen your parameters and try again.</p>
-    </section>
 
     <div id="ariel">
         <h2 class="name">Ariel Altaras</h2>
