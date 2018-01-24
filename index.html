@@ -25,14 +25,14 @@
             </div>
             <div class="recipe-info" id="recipe-info-{{id}}">
                 <p class="yield">Number of Servings: {{yield}}</p>
-                <ul class="ingredients">Ingredients:
-                    <li>{{{ingredients}}}</li>
+                <ul class="ingredients recipe-list">Ingredients:
+                    <li class="recipe-list-item">{{{ingredients}}}</li>
                 </ul>
-                <ul class="nutrition">Nutrition:
-                    <p>Calories per serving: {{servCalories}}</p>
-                    <li>Fat: {{servFat}}g</li>
-                    <li>Carbohydrates: {{servCarb}}g</li>
-                    <li>Protein: {{servPro}}g</li>
+                <ul class="nutrition recipe-list">Nutrition:
+                    <li class="recipe-list-item">  Calories per serving: {{servCalories}}</li>
+                    <li class="recipe-list-item">Fat: {{servFat}}g</li>
+                    <li class="recipe-list-item">Carbohydrates: {{servCarb}}g</li>
+                    <li class="recipe-list-item">Protein: {{servPro}}g</li>
                 </ul>
                 <a href="{{url}}" class="url">Make This Meal!</a>
                 <p class="source">Recipe from: {{source}}</p>
@@ -42,7 +42,6 @@
                 <button data-id="{{id}}" class="delete-recipe">Delete Recipe</button>
             </div>
         </div>        
-
     </script>
   
 
@@ -57,11 +56,11 @@
         <a href="/"><img id="foodfit-logo" src="styles/images/FoodFIt-Logo-w-Text-Rounded-Corners.png" alt="FoodFit Logo"></a>
         <hr>
         <ul id="nav" class="menu"> 
-            <li><a href="/"> Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/food-search">Recipe Search</a></li>
-            <li><a href="/activity-search">Activity Search</a></li>
-            <li><a href="/recipe-box">Recipe Box</a></li>      
+            <a href="/"><li>Home</li></a>
+            <a href="/about"><li>About Us</li></a>
+            <a href="/food-search"><li>Recipe Search</li></a>
+            <a href="/activity-search"><li>Activity Search</li></a>
+            <a href="/recipe-box"><li>Recipe Box</li></a>     
         </ul>
         </nav>
     </header>
@@ -119,17 +118,17 @@
 
 <section id="foodSearch-view" class="view">
     <form id="search-form">
-        <input type="text" placeholder="Search for ingredient" id="food" required>
-        <input type="text" placeholder="min Calories" id="minCal" required>
-        <input type="text" placeholder="max Calories" id="maxCal" required>
+        <input type="text" placeholder="Search for an Ingredient" id="food" required>
+        <input type="text" placeholder="Minimum Calories" id="minCal" required>
+        <input type="text" placeholder="Maximum Calories" id="maxCal" required>
         <select id="healthLabel">
             <option selected disabled>Select One</option>
-            <option value="&health=peanut-free">no peanuts</option>
-            <option value="&health=tree-nut-free">no tree nuts</option>
-            <option value="&health=vegan">vegan</option>
-            <option value="&health=vegetarian">vegetarian</option>
+            <option value="&health=peanut-free">No Peanuts</option>
+            <option value="&health=tree-nut-free">No Tree Nuts</option>
+            <option value="&health=vegan">Vegan</option>
+            <option value="&health=vegetarian">Vegetarian</option>
         </select>
-        <button type="click" id="foodSearch-submit">Submit</button>
+        <button type="click" class="submit" id="foodSearch-submit">Submit</button>
     </form>
 </section>
 
@@ -142,53 +141,41 @@
             <option value="superhero">superhero</option>
             <option value="superheroine">superheroine</option>
         </select>
-        <button type="click" id="activitySearch-submit">Submit</button>
+        <button type="click" class="submit" id="activitySearch-submit">Submit</button>
     </form>
 
-    <section id="activitySearch-view" class="view">
-            <form>
-                    <select id="activity-search">
-                        <option selected disabled>Select One</option>
-                        <option value="fun">fun</option>
-                        <option value="character">character</option>
-                        <option value="superhero">superhero</option>
-                        <option value="superheroine">superheroine</option>
-                    </select>
-                <button type="click" id="activitySearch-submit">Submit</button>
-            </form>
-   
-        <img class="activity fun thumbnail" src="activityImg/breathless.jpg" alt="breathless">
-        <img class="activity fun thumbnail" src="activityImg/fast-and-furious.jpg" alt="fast-and-furious">
-        <img class="activity fun thumbnail" src="activityImg/make-me-a-sandwich.jpg" alt="sandwich">
-        <img class="activity fun thumbnail" src="activityImg/movie-night.jpg" alt="movie-night">
-        <img class="activity fun thumbnail" src="activityImg/office.jpg" alt="office">
-        <img class="activity fun thumbnail" src="activityImg/stretch.jpg" alt="stretch">
-        <img class="activity fun thumbnail" src="activityImg/tv.jpg" alt="tv">
-        <img class="activity fun thumbnail" src="activityImg/wall-hugger.jpg" alt="wall-hugger">
-        <img class="activity character thumbnail" src="activityImg/bruce-lee.jpg" alt="bruce-lee">
-        <img class="activity character thumbnail" src="activityImg/fireman.jpg" alt="fireman">
-        <img class="activity character thumbnail" src="activityImg/jedi.jpg" alt="jedi">
-        <img class="activity character thumbnail" src="activityImg/lara-croft.jpg" alt="lara-croft">
-        <img class="activity character thumbnail" src="activityImg/mermaid.jpg" alt="mermaid">
-        <img class="activity character thumbnail" src="activityImg/ninja.jpg" alt="ninja">
-        <img class="activity character thumbnail" src="activityImg/pirate.jpg" alt="pirate">
-        <img class="activity character thumbnail" src="activityImg/storm-trooper.jpg" alt="storm-trooper">
-        <img class="activity superheroine thumbnail" src="activityImg/bat-girl.jpg" alt="bat-girl">
-        <img class="activity superhero thumbnail" src="activityImg/black-panther.jpg" alt="black-panther">
-        <img class="activity superheroine thumbnail" src="activityImg/black-widow.jpg" alt="black-widow">
-        <img class="activity superhero thumbnail" src="activityImg/captin-america.jpg" alt="captin-america">
-        <img class="activity superheroine thumbnail" src="activityImg/cat-woman.jpg" alt="cat-woman">
-        <img class="activity superhero thumbnail" src="activityImg/dare-devil.jpg" alt="dare-devil">
-        <img class="activity superhero thumbnail" src="activityImg/flash.jpg" alt="flash">
-        <img class="activity superheroine thumbnail" src="activityImg/harley-quinn.jpg" alt="harley-quinn">
-        <img class="activity superhero thumbnail" src="activityImg/ironman.jpg" alt="ironman">
-        <img class="activity superheroine thumbnail" src="activityImg/ivy.jpg" alt="ivy">
-        <img class="activity superhero thumbnail" src="activityImg/joker.jpg" alt="joker">
-        <img class="activity superheroine thumbnail" src="activityImg/raven.jpg" alt="raven">
-        <img class="activity superheroine thumbnail" src="activityImg/super-girl.jpg" alt="super-girl">
-        <img class="activity superhero thumbnail" src="activityImg/superman.jpg" alt="superman">
-        <img class="activity superhero thumbnail" src="activityImg/thor.jpg" alt="thor">
-        <img class="activity superheroine thumbnail" src="activityImg/wonder-woman.jpg" alt="wonder-woman">
+        <img class="activity fun thumbnail-activity" src="activityImg/breathless.jpg" alt="breathless">
+        <img class="activity fun thumbnail-activity" src="activityImg/fast-and-furious.jpg" alt="fast-and-furious">
+        <img class="activity fun thumbnail-activity" src="activityImg/make-me-a-sandwich.jpg" alt="sandwich">
+        <img class="activity fun thumbnail-activity" src="activityImg/movie-night.jpg" alt="movie-night">
+        <img class="activity fun thumbnail-activity" src="activityImg/office.jpg" alt="office">
+        <img class="activity fun thumbnail-activity" src="activityImg/stretch.jpg" alt="stretch">
+        <img class="activity fun thumbnail-activity" src="activityImg/tv.jpg" alt="tv">
+        <img class="activity fun thumbnail-activity" src="activityImg/wall-hugger.jpg" alt="wall-hugger">
+        <img class="activity character thumbnail-activity" src="activityImg/bruce-lee.jpg" alt="bruce-lee">
+        <img class="activity character thumbnail-activity" src="activityImg/fireman.jpg" alt="fireman">
+        <img class="activity character thumbnail-activity" src="activityImg/jedi.jpg" alt="jedi">
+        <img class="activity character thumbnail-activity" src="activityImg/lara-croft.jpg" alt="lara-croft">
+        <img class="activity character thumbnail-activity" src="activityImg/mermaid.jpg" alt="mermaid">
+        <img class="activity character thumbnail-activity" src="activityImg/ninja.jpg" alt="ninja">
+        <img class="activity character thumbnail-activity" src="activityImg/pirate.jpg" alt="pirate">
+        <img class="activity character thumbnail-activity" src="activityImg/storm-trooper.jpg" alt="storm-trooper">
+        <img class="activity superheroine thumbnail-activity" src="activityImg/bat-girl.jpg" alt="bat-girl">
+        <img class="activity superhero thumbnail-activity" src="activityImg/black-panther.jpg" alt="black-panther">
+        <img class="activity superheroine thumbnail-activity" src="activityImg/black-widow.jpg" alt="black-widow">
+        <img class="activity superhero thumbnail-activity" src="activityImg/captin-america.jpg" alt="captin-america">
+        <img class="activity superheroine thumbnail-activity" src="activityImg/cat-woman.jpg" alt="cat-woman">
+        <img class="activity superhero thumbnail-activity" src="activityImg/dare-devil.jpg" alt="dare-devil">
+        <img class="activity superhero thumbnail-activity" src="activityImg/flash.jpg" alt="flash">
+        <img class="activity superheroine thumbnail-activity" src="activityImg/harley-quinn.jpg" alt="harley-quinn">
+        <img class="activity superhero thumbnail-activity" src="activityImg/ironman.jpg" alt="ironman">
+        <img class="activity superheroine thumbnail-activity" src="activityImg/ivy.jpg" alt="ivy">
+        <img class="activity superhero thumbnail-activity" src="activityImg/joker.jpg" alt="joker">
+        <img class="activity superheroine thumbnail-activity" src="activityImg/raven.jpg" alt="raven">
+        <img class="activity superheroine thumbnail-activity" src="activityImg/super-girl.jpg" alt="super-girl">
+        <img class="activity superhero thumbnail-activity" src="activityImg/superman.jpg" alt="superman">
+        <img class="activity superhero thumbnail-activity" src="activityImg/thor.jpg" alt="thor">
+        <img class="activity superheroine thumbnail-activity" src="activityImg/wonder-woman.jpg" alt="wonder-woman">
     </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
