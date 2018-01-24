@@ -7,7 +7,7 @@ var app = app || {};
     const $view = $('#activitySearch-view')
 
     activitySearchView.init = () => {
-        $('img').hide()
+        $('.activity').hide()
         
         $('#activitySearch-submit').one('click', (e) => {
             e.preventDefault()
@@ -15,7 +15,7 @@ var app = app || {};
             let selection = $('#activity-search').val()
             $(`.${selection}`).show()
         })
-        $view.show()
+        $view.slideToggle('slow')
     }
 
     module.activitySearchView = activitySearchView

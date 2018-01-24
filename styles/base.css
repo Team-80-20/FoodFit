@@ -4,6 +4,7 @@
     margin: 0;
 }
 
+
 #foodfit-logo{
     width: 50%;
     margin: 4%;
@@ -14,15 +15,16 @@ hr{
     width: 100%;
     height: 60px;
     margin-top: 0;
-    border-bottom: 1px solid #d5d5d5;
+    /* border-bottom: 1px solid #d5d5d5; */
     box-shadow: 0 10px 50px -15px #333;
-    margin: -77px auto 5.5%; 
+    margin: -77px auto 0; 
     padding-bottom: 4%;
   
 }
 
 section{
     width: 95%;
+    /* margin:15%; */
     margin: 0 auto;
 }
 
@@ -38,6 +40,32 @@ section{
     width: 100%;
 }
 
+.recipe-info{
+    padding: 2% 2% 2% 2%;
+}
+
+.quick-view-serving-background{
+    position: absolute;
+    width: 100%;
+    top: 315px;
+    right: 0px;
+    text-align: end;
+    color: white;
+    background: linear-gradient(to bottom, rgba(108,107,107,0), rgba(108,107,107,1));
+    height: 16%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 6%;
+}
+
+.quick-view-serving{
+    position: relative;
+    text-align: end;
+    color: white;
+    padding-bottom: 2%;
+}
+
 .label{
     color: white;
     padding: 4% 20% 4% 0%;
@@ -50,4 +78,21 @@ section{
     min-height: 10%;
     width: 95%;
     background: linear-gradient(to top, rgba(108,107,107,0), rgba(108,107,107,1));
+}
+
+.image-container{
+    overflow: hidden;
+    height: 375px;
+}
+
+.view{
+    margin-top: 24%;
+    z-index: 99999;
+}
+
+.view-more{
+    position: absolute;
+    bottom: 2%;
+    left: 6%;
+
 }
