@@ -70,11 +70,15 @@
 </section>
     
 <section id="home-view" class="view">
-    <h3>Welcome to FoodFit! This app helps with both sides of the 80/20 health and fitness equation by helping you choose food activities to meet your goals.</h3>
-    <p>Click the "Search Food" button to search for recipes based on an ingredient, calorie range, and dietary restriction.</p>
-    <p>Click the "Search Activities" button to choose from a variety of themes to find a fun activity.</p>
-        <a href="/food-search" class="homepage-button">Search Food</a>                
-        <a href="/activity-search" class="homepage-button">Search Activities</a>                
+    <img class="homepage-masthead" src="/styles/images/Food1.png" alt="Food Imag">
+    <div class="info">
+    <h3>Welcome to FoodFit! <br>This app helps with both sides of the 80/20 health and fitness equation by helping you choose food activities to meet your goals.</h3>
+    <br>
+    <p class="home-para">Search for recipes based on an ingredient, calorie range, and dietary restriction.</p>
+    <a href="/food-search" class="homepage-button">Search Food</a>                
+    <p class="home-para">Choose from a variety of themes to find a fun activity.</p>
+    <a href="/activity-search" class="homepage-button">Search Activities</a>         
+</div>       
            
 </section>
 
@@ -84,50 +88,54 @@
 </section>
 
 <section id="about-view" class="view">
-    <h3>The Food Fit app was created by CodeFellows 301 students using the www.edamam.com site as a 3rd party API (Thank's Edamam!), to build a single page style website with mobile first design.<br>Meet our fantasitc team!</h3>
-
-
+    <h3 class="banner">Meet our fantasitc team!</h3>
 
     <div id="ariel">
         <h2 class="name">Ariel Altaras</h2>
-        <div id="pic">
-            <img src="activityImg/CFshield.png" alt="">
-        </div>
+            <img class="thumbnail proPic" src="styles/images/ariel.jpg" alt="">
 
-        <p id="about">Freak human out make funny noise mow mow mow mow mow mow success now attack human. Human give me attention meow spill litter box, scratch at owner, destroy all furniture, especially couch sleep on my human's head for massacre a bird in the living room and then look like the cutest and most innocent animal on the planet spill litter box, scratch at owner, destroy all furniture, especially couch but ooh, are those your $250 dollar sandals? lemme use that as my litter box the dog smells bad. Lick left leg for ninety minutes, still dirty see owner, run in terror. Warm up laptop with butt lick butt fart rainbows until owner yells pee in litter box hiss at cats chase dog then run away or licks your face.
+        <p id="about">
+        A former research geneticist looking to transfer her problem solving skills to coding. Loves cats, knitting, the gym, and Scandinavian metal.
         </p>
+        <a href="https://www.linkedin.com/in/arielaltaras/"><img class="icon" src="styles/images/if_linkedin_28298.png" alt=""></a>
+        <a href="https://github.com/stariel"><img class="icon" src="styles/images/if_github_82694.png" alt=""></a>
     </div>
 
     <div id="devin">
         <h2 class="name">Devin Cunningham</h2>
-        <div id="pic">
-            <img src="activityImg/CFshield.png" alt="">
-        </div>
+            <img class="thumbnail proPic" src="styles/images/devin.jpg" alt="">
 
-        <p id="about">Doberman pinscher pomeranian bang pomeranian catch boxer bite maltese. Bulldog bang yorkshire terrier, chew toy great dance leap boxer greyhound poodle milk bone dog bone. Greyhound english mastiff tail bring it leash stay leash take it, speak tennis ball down chew toy fetch. Poodle poodle leap chow chow pomeranian, squeak toy pomeranian stand sit greyhound dog toy take it. Great dance pomsky puppy bite fetch bell sit pretty poodle great dance. Rottweiler shake leash play dead chihuahua boxer puppy heel. Shake bite sit dog, leash dog bowl dog bone bell pomeranian stay chew toy pit bull stay. Puppies poodle rottweiler chihuahua sit poodle, come puppies chew toy st bernard. St bernard dog bowl squirrel bark st bernard leap leash sit shake.
+        <p id="about">
+        Devin is a communications and marketing specialist for a local pediatric company focusing on creating advertisements and social media marketing. When he isn't behind the computer, he is either out creating videos, snowboarding, or hanging out on Lake Sammamish. Once he graduates Code Fellows, he wants to become the developer for the company where he works.
         </p>
+        <a href="https://www.linkedin.com/in/devin-cunningham-9222314b/"><img class="icon" src="styles/images/if_linkedin_28298.png" alt=""></a>
+        <a href="https://github.com/DevinTyler26"><img class="icon" src="styles/images/if_github_82694.png" alt=""></a>
     </div>
     <div id="ryan">
         <h2 class="name">Ryan Johnson</h2>
-        <div id="pic">
-            <img src="activityImg/CFshield.png" alt="">
-        </div>
+            <img class="thumbnail proPic" src="styles/images/CFshield.png" alt="">
 
-        <p id="about"> Ryan PE teacher by day amateur web developer by night. Father of two, husband of 10 years, sacrificing sleep and
-            sanity to change careers for my family; thank goodness for coffee. Code is a new passion and interest discovered
-            through Code Fellows 101 introduction to web development class. Ryan has been hooked ever sense and excited about
-            this new adventure in life.
+        <p id="about">
+        Ryan PE teacher by day amateur web developer by night. Father of two, husband of 10 years, sacrificing sleep and
+        sanity to pursue a career in web development for my family; thank goodness for coffee.
         </p>
+        <a href="https://www.linkedin.com/in/ryan-johnson-95ab8a25"><img class="icon" src="styles/images/if_linkedin_28298.png" alt=""></a>
+        <a href="https://github.com/rjtj2007"><img class="icon" src="styles/images/if_github_82694.png" alt=""></a>
+    </div>
+    <div>
+        <footer class="footer">
+           
+        </footer>
     </div>
 </section>
 
 <section id="foodSearch-view" class="view">
     <form id="search-form">
         <input type="text" placeholder="Search for an Ingredient" id="food" required>
-        <input type="text" placeholder="Minimum Calories" id="minCal" required>
-        <input type="text" placeholder="Maximum Calories" id="maxCal" required>
+        <input type="text" placeholder="Minimum Calories per Serving" id="minCal" required>
+        <input type="text" placeholder="Maximum Calories per Serving" id="maxCal" required>
         <select id="healthLabel">
-            <option selected disabled>Select One</option>
+            <option selected disabled>Dietary Restriction</option>
             <option value="&health=peanut-free">No Peanuts</option>
             <option value="&health=tree-nut-free">No Tree Nuts</option>
             <option value="&health=vegan">Vegan</option>
@@ -138,6 +146,8 @@
 </section>
 
 <section id="activitySearch-view" class="view">
+        <p>Pick your favorite style of workout!</p>
+        <br>
     <form>
         <select id="activity-search">
             <option selected disabled>Select One</option>

@@ -54,7 +54,7 @@ function saveRecipe(recipeResult) {
     if (localStorage.getItem('recipeBox')) {
         storedRecipes = JSON.parse(localStorage.getItem('recipeBox'))
     }
-    storedRecipes.push(JSON.stringify(recipeResult))
+    storedRecipes.push(recipeResult)
     localStorage.setItem('recipeBox', JSON.stringify(storedRecipes)
 )}
     module.recipeResults = recipeResults
