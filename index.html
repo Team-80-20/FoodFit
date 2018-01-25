@@ -70,11 +70,15 @@
 </section>
     
 <section id="home-view" class="view">
-    <h3>Welcome to FoodFit! This app helps with both sides of the 80/20 health and fitness equation by helping you choose food activities to meet your goals.</h3>
-    <p>Click the "Search Food" button to search for recipes based on an ingredient, calorie range, and dietary restriction.</p>
-    <p>Click the "Search Activities" button to choose from a variety of themes to find a fun activity.</p>
-        <a href="/food-search" class="homepage-button">Search Food</a>                
-        <a href="/activity-search" class="homepage-button">Search Activities</a>                
+    <img class="homepage-masthead" src="/styles/images/Food1.png" alt="Food Imag">
+    <div class="info">
+    <h3>Welcome to FoodFit! <br>This app helps with both sides of the 80/20 health and fitness equation by helping you choose food activities to meet your goals.</h3>
+    <br>
+    <p class="home-para">Search for recipes based on an ingredient, calorie range, and dietary restriction.</p>
+    <a href="/food-search" class="homepage-button">Search Food</a>                
+    <p class="home-para">Choose from a variety of themes to find a fun activity.</p>
+    <a href="/activity-search" class="homepage-button">Search Activities</a>         
+</div>       
            
 </section>
 
@@ -124,10 +128,10 @@
 <section id="foodSearch-view" class="view">
     <form id="search-form">
         <input type="text" placeholder="Search for an Ingredient" id="food" required>
-        <input type="text" placeholder="Minimum Calories" id="minCal" required>
-        <input type="text" placeholder="Maximum Calories" id="maxCal" required>
+        <input type="text" placeholder="Minimum Calories per Serving" id="minCal" required>
+        <input type="text" placeholder="Maximum Calories per Serving" id="maxCal" required>
         <select id="healthLabel">
-            <option selected disabled>Select One</option>
+            <option selected disabled>Dietary Restriction</option>
             <option value="&health=peanut-free">No Peanuts</option>
             <option value="&health=tree-nut-free">No Tree Nuts</option>
             <option value="&health=vegan">Vegan</option>
@@ -138,6 +142,8 @@
 </section>
 
 <section id="activitySearch-view" class="view">
+        <p>Pick your favorite style of workout!</p>
+        <br>
     <form>
         <select id="activity-search">
             <option selected disabled>Select One</option>
