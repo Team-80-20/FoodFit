@@ -2,24 +2,22 @@
 
 
 #about-view {
-    padding-bottom: 5em;
+    padding-bottom: 3em;
 }
 
+.banner {
+    text-align: center;
+}
+
+.proPic {
+    max-width: 90%;
+    max-height: 90%;
+}
 
 .name {
     padding: .5em;
 }
 
-#pic {
-    height: 16em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-
+.icon {
+    padding-top: 10px;
 }
-
-#about {
-
-}
-
