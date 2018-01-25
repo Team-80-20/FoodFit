@@ -83,45 +83,162 @@ nav {
     color: #999;
 } 
 
-/* @media (min-width: 800px), screen {
+@media (min-width: 800px) {
     .cross{
-         display: none;
+         display: none !important;
     }
 
     .hamburger{
-        display: none;
+        display: none !important;
    }
 
-   .menu{
-       display: flex;
+   #nav, .menu{
+       display: flex !important;
+       margin-right: 6% !important;
+       align-items: center;
+    }
+    
+    li{
+        border: none !important;
+        border-bottom: none; 
+        display: flex;
+        /* padding: 10% !important; */
+        width: 100%;
+        margin-right: 45px;
+   }
+
+   .menu, li:hover{
+
    }
 
    header{
        width: 100%;
    }
 
-   ul {
-       width: 100%;
-        display: flex;
-        list-style-type: none;
-        margin: 0;
-        width: 60px;
-    } 
-
-    li, a {
-        width: 15%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        margin: 6%;
-        border: none !important;
-        border-bottom: none;
-
-    }
 
     header{display:inline-block; font-size:12px; }
 
     hr{
         display: none;
     }
-} */
+
+    #foodfit-logo{
+        width:20%; /* you can use % */
+        height: 20%;
+        margin: 0;
+        padding: 1%;
+    }
+
+    section{
+        width: 100%;
+        margin: 0 auto;
+    }    
+
+    .view{
+        margin: 0 auto;
+    }
+
+    
+    .info{
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        margin: 0 auto; 
+        margin-top: 12% !important; 
+        background-color: rgba(108, 108, 108, 0.7);
+        color: white;
+        height: 100%;
+    }
+    .home-para{
+        color: white;
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 1%; 
+    }
+
+    h3{
+        color: white;
+        font-size: 2.5em;
+        text-align: center;
+
+    }
+
+    #home-view{
+        width: 100%;
+        /* overflow: hidden; */
+        height: 130%;
+        background: url(/styles/images/Food1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: bottom;  
+    }
+
+    .homepage-masthead{
+        display: none;
+
+    }
+
+    .homepage-button{
+        margin: 0 auto !important;
+        width: 60%;
+        margin-bottom: 4% !important;
+    }
+
+    #search-form{
+        margin-top: 12%;
+
+    }
+    
+    #foodResults-view{
+        margin-top: 12%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+
+    .thumbnail{
+        width: 20%;
+        height: auto;
+    }
+
+    .view-less, .view-more{
+        display: none;
+    }
+
+    .recipe-info{
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .quick-view-serving-background{
+        display: none;
+    }
+
+    .image-container{
+        height: auto;
+    }
+
+    .save-recipe{
+        bottom: -1%;
+    }
+
+    #foodSearch-view, #search-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 1%;
+    }
+
+    input, select{
+        width: 25%;
+        margin-bottom: 2%;
+        padding-left: 1%;
+    }
+
+
+    .submit{
+        width: 25%;
+    }
+}
