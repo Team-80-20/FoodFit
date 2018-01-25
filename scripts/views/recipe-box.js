@@ -9,12 +9,13 @@ var app = app || {};
     
     recipeBoxView.init = () =>{
         $('#recipe-box').empty()
+        app.recipeResults = []
         let storedRecipe = JSON.parse(localStorage.getItem('recipeBox'))
-        let parsedRecipe = []
-        storedRecipe.forEach(item =>{
-            parsedRecipe.push(JSON.parse(item))
-        })
-        parsedRecipe.forEach(recipe => {
+        // let parsedRecipe = []
+        // storedRecipe.forEach(item =>{
+        //     parsedRecipe.push(item)
+        // })
+        storedRecipe.forEach(recipe => {
             new app.RecipeObj (recipe)
         })
         let template = Handlebars.compile($('#recipe-template').text());       
@@ -32,14 +33,14 @@ var app = app || {};
             $(`#show-id-${id}`).hide()
            })
 
-        // $('.recipe-div').on('click', '.delete-recipe', (e) => {
-        //     const id = $(e.target).data('id')
-        //     console.log(`deleted id:${id}`)
-        //     let newBox = app.recipeResults.splice(id, 1)
-        //     localStorage.setItem('recipeBox', JSON.stringify(newBox))
-        //     console.log(newBox)
-        //     // page('/recipe-box')
-        // })
+        $('.recipe-div').on('click', '.delete-recipe', (e) => {
+            const id = $(e.target).data('id')
+            console.log(`deleted id:${id}`)
+            let newBox = app.recipeResults.splice(id-1, 1)
+            localStorage.setItem('recipeBox', JSON.stringify(newBox))
+            console.log(newBox)
+            page('/recipe-box')
+        })
     })
     $view.slideToggle('slow')
 }
