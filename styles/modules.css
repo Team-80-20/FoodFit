@@ -118,7 +118,7 @@ nav {
 
     header{display:inline-block; font-size:12px; }
 
-    hr{
+    #nav-hr{
         display: none;
     }
 
@@ -199,6 +199,17 @@ nav {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    #about-view{
+        margin-top: 8%;
+        padding-left: 2%;
+        
+    }
+
+    .person{
+        margin-bottom: 2%; 
+    }
+
 
     .thumbnail-activity{
         display: inline;

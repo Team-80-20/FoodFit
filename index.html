@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/styles/images/FoodFit-favicon.png"/>
@@ -13,8 +14,9 @@
     <title>FoodFit</title>
     <meta property="og:title" content="FoodFit" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://team-80-20.github.io/FoodFit/" />
+    <meta property="og:image" content="https://team-80-20.github.io/FoodFit/styles/images/FoodFit-Logo-Mark-Rounded-Corners.png" />
+    <meta property="og:description" content="This app helps with both sides of the 80/20 health and fitness equation by helping you choose food and activities to meet your goals." />
 
     <script type="text/x-handlebars-template" id="recipe-template">
         <div class="recipe-div thumbnail">
@@ -55,13 +57,13 @@
         <button class="hamburger">&#9776;</button>
         <button class="cross">&#735;</button>
         <a href="/"><img id="foodfit-logo" src="styles/images/FoodFIt-Logo-w-Text-Rounded-Corners.png" alt="FoodFit Logo"></a>
-        <hr>
+        <hr id="nav-hr">
         <ul id="nav" class="menu"> 
-            <a href="/"><li>Home</li></a>
-            <a href="/about"><li>About Us</li></a>
-            <a href="/food-search"><li>Recipe Search</li></a>
-            <a href="/activity-search"><li>Activity Search</li></a>
-            <a href="/recipe-box"><li>Recipe Box</li></a>     
+            <a href="./"><li>Home</li></a>
+            <a href="./about"><li>About Us</li></a>
+            <a href="./food-search"><li>Recipe Search</li></a>
+            <a href="./activity-search"><li>Activity Search</li></a>
+            <a href="./recipe-box"><li>Recipe Box</li></a>     
         </ul>
         </nav>
     </header>
@@ -72,7 +74,7 @@
 <section id="home-view" class="view">
     <img class="homepage-masthead" src="/styles/images/Food1.png" alt="Food Imag">
     <div class="info">
-    <h3>Welcome to FoodFit! <br>This app helps with both sides of the 80/20 health and fitness equation by helping you choose food activities to meet your goals.</h3>
+    <h3>Welcome to FoodFit! <br>This app helps with both sides of the 80/20 health and fitness equation by helping you choose food and activities to meet your goals.</h3>
     <br>
     <p class="home-para">Search for recipes based on an ingredient, calorie range, and dietary restriction.</p>
     <a href="/food-search" class="homepage-button">Search Food</a>                
@@ -84,18 +86,26 @@
 
 <section id="tdee-view" class="view">
     <form>
-        <input type="text" value="age" placeholder="Age">
-        <input type="text" value="height" placeholder="height in inches">
-        <input type="text" value="weight" placeholder="weight in pounds">
+        <select name="sex" id="sex">
+            <option selected disabled>Select One</option>
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select>
+        <input type="text" id="age" placeholder="Age">
+        <input type="text" id="height" placeholder="height in inches">
+        <input type="text" id="weight" placeholder="weight in pounds">
         <select id="activityLevel">
             <option selected disabled>Select One</option>
-            <option value="sedentary">sedentary</option>
-            <option value="lightly-active">lightly active</option>
-            <option value="moderately-active">moderately active</option>
-            <option value="very-active">very active</option>
-            <option value="extremely-active">extremely active</option>
+            <option value="1.2">sedentary</option>
+            <option value="1.375">lightly active</option>
+            <option value="1.55">moderately active</option>
+            <option value="1.725">very active</option>
+            <option value="1.9">extremely active</option>
         </select>
+        <button type="click" class="submit" id="tdee-submit">Submit</button>
     </form>
+    <p id="tdee-spot">Your TDEE is: <span id="tdee-answer"></span></p>
+    <a href="/food-search" class="homepage-button">Search Food</a> 
 </section>
 
 <section id="foodResults-view" class="view">
@@ -104,9 +114,9 @@
 </section>
 
 <section id="about-view" class="view">
-    <h3 class="banner">Meet our fantasitc team!</h3>
+    <h3 class="banner">Meet our fantastic team!</h3>
 
-    <div id="ariel">
+    <div id="ariel" class="person">
         <h2 class="name">Ariel Altaras</h2>
             <img class="thumbnail proPic" src="styles/images/ariel.jpg" alt="">
 
@@ -116,20 +126,20 @@
         <a href="https://www.linkedin.com/in/arielaltaras/"><img class="icon" src="styles/images/if_linkedin_28298.png" alt=""></a>
         <a href="https://github.com/stariel"><img class="icon" src="styles/images/if_github_82694.png" alt=""></a>
     </div>
-
-    <div id="devin">
+    <hr class="hr">
+    <div id="devin" class="person">
         <h2 class="name">Devin Cunningham</h2>
             <img class="thumbnail proPic" src="styles/images/devin.jpg" alt="">
-
         <p id="about">
         Devin is a communications and marketing specialist for a local pediatric company focusing on creating advertisements and social media marketing. When he isn't behind the computer, he is either out creating videos, snowboarding, or hanging out on Lake Sammamish. Once he graduates Code Fellows, he wants to become the developer for the company where he works.
         </p>
         <a href="https://www.linkedin.com/in/devin-cunningham-9222314b/"><img class="icon" src="styles/images/if_linkedin_28298.png" alt=""></a>
         <a href="https://github.com/DevinTyler26"><img class="icon" src="styles/images/if_github_82694.png" alt=""></a>
     </div>
-    <div id="ryan">
+    <hr>
+    <div id="ryan" class="person">
         <h2 class="name">Ryan Johnson</h2>
-            <img class="thumbnail proPic" src="styles/images/CFshield.png" alt="">
+            <img class="thumbnail proPic" src="styles/images/ryan.jpg" alt="">
 
         <p id="about">
         Ryan PE teacher by day amateur web developer by night. Father of two, husband of 10 years, sacrificing sleep and
@@ -159,6 +169,7 @@
         </select>
         <button type="click" class="submit" id="foodSearch-submit">Submit</button>
     </form>
+    <a href="/tdee" class="homepage-button">Calculate your TDEE</a> 
 </section>
 
 <section id="activitySearch-view" class="view">
@@ -214,12 +225,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
 <script src="scripts/models/recipes.js"></script>
 <script src="scripts/views/about-us.js"></script>
-<script src="scripts/views/activity-results.js"></script>
 <script src="scripts/views/activity-search.js"></script>
 <script src="scripts/views/food-results.js"></script>
 <script src="scripts/views/food-search.js"></script>
 <script src="scripts/views/home.js"></script>
-<script src="scripts/views/login.js"></script>
+<script src="scripts/views/tdee.js"></script>
 <script src="scripts/views/recipe-box.js"></script>
 <script src="scripts/views/hamburger.js"></script>
 <script src="scripts/controllers/routes.js"></script>

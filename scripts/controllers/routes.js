@@ -1,3 +1,7 @@
+if (window.location.pathname !== '/') {
+    page.base('/FoodFit')
+}
+
 page('/*', (ctx, next) => {
     $('.view').hide()
     next()
@@ -21,6 +25,10 @@ page('/food-results', () => {
 
 page('/recipe-box', () => {
   app.recipeBoxView.init()
+})
+
+page('/tdee', () => {
+  app.tdeeView.init()
 })
 
 page('/activity-search', () => {
