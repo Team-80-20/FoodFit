@@ -83,6 +83,23 @@ nav {
     color: #999;
 } 
 
+#tdee-button{
+    width: 80%;
+    background-color: rgb(95, 180, 212);
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.5em;
+    border-radius: 15px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    padding: 15px 32px;
+    text-decoration: none;
+    margin: auto auto;
+}
+
 @media (min-width: 800px) {
     .cross{
          display: none !important;
@@ -167,7 +184,7 @@ nav {
         width: 100%;
         /* overflow: hidden; */
         height: 130%;
-        background: url('/styles/images/Food1.png');
+        background: url('./styles/images/Food1.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: bottom;  
@@ -184,11 +201,11 @@ nav {
         margin-bottom: 4% !important;
     }
 
-    #search-form, #activitySearch-view{
+    #search-form, #activitySearch-view, #tdee-view{
         margin-top: 12%;
 
     }
-    #activitySearch-view{
+    #activitySearch-view, #tdee-view{
         margin-left: 2%;
     }
     
@@ -261,14 +278,18 @@ nav {
     }
 
     input, select{
-        width: 25%;
+        min-width: 400px;
+        max-width: 600px;
         margin-bottom: 2%;
         padding-left: 1%;
     }
 
 
     .submit{
-        width: 25%;
+        min-width: 400px;
+
+        max-width: 600px;
+        
     }
 
     .save-recipe, .delete-recipe{
@@ -286,5 +307,22 @@ nav {
         text-decoration: none;
         display: inline-block;
         font-size: 1.15em;
+    }
+
+    #tdee-button{
+        min-width: 400px;
+        max-width: 540px;        
+        margin-bottom: 4% !important;
+        border-radius: 15px;
+        background-color: #5fb4d4;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.5em;
+        margin-bottom: 4%;
+        margin-left: .25%;
     }
 }
