@@ -6,7 +6,10 @@ var app = app || {};
 
     const $view = $('#tdee-view')
 
-    tdeeView.init = () => $view.show()
+    tdeeView.init = () => {
+        $view.show() 
+        $('#tdee-spot').hide()
+    }
 
     $('#tdee-submit').one('click', (e) => {
         e.preventDefault()
@@ -18,18 +21,18 @@ var app = app || {};
         let age = $('#age').val()
         let height = $('#height').val()
         let weight = $('#weight').val()
-        let bmr =
-        console.log(sex, age, height, weight)
+        let bmr = 0
         if (sex === 'male') {
             bmr = 66 + (6.23 * weight) + (12.7 * height) - (6.8 * age)
         }
         else {
             bmr = 655 + (4.35 * weight) + (4.7 * height) - (4.7 * age)
         }
-        console.log(bmr)
         let tdee = bmr * parseFloat($('#activityLevel').val())
-        console.log(tdee)
+        $('#tdee-answer').text(Math.round(tdee))
+        $('#tdee-spot').show()
         }
+
 
     module.tdeeView = tdeeView
     
