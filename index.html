@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-    <link rel="stylesheet" href="styles/normalize.css">
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/styles/images/FoodFit-favicon.png"/>
@@ -77,9 +77,9 @@
     <h3>Welcome to FoodFit! <br>This app helps with both sides of the 80/20 health and fitness equation by helping you choose food and activities to meet your goals.</h3>
     <br>
     <p class="home-para">Search for recipes based on an ingredient, calorie range, and dietary restriction.</p>
-    <a href="/food-search" class="homepage-button">Search Food</a>                
+    <a href="./food-search" class="homepage-button">Search Food</a>                
     <p class="home-para">Choose from a variety of themes to find a fun activity.</p>
-    <a href="/activity-search" class="homepage-button">Search Activities</a>         
+    <a href="./activity-search" class="homepage-button">Search Activities</a>         
 </div>       
            
 </section>
@@ -103,9 +103,9 @@
             <option value="1.9">extremely active</option>
         </select>
         <button type="click" class="submit" id="tdee-submit">Submit</button>
+        <a href="./food-search" class="homepage-button">Search Food</a> 
     </form>
-    <p id="tdee-spot">Your TDEE is: <span id="tdee-answer"></span></p>
-    <a href="/food-search" class="homepage-button">Search Food</a> 
+    <p id="tdee-spot">Your TDEE is: <span id="tdee-answer"> </span></p>
 </section>
 
 <section id="foodResults-view" class="view">
@@ -168,8 +168,8 @@
             <option value="&health=vegetarian">Vegetarian</option>
         </select>
         <button type="click" class="submit" id="foodSearch-submit">Submit</button>
+        <a href="/tdee" id="tdee-button">Calculate your TDEE</a> 
     </form>
-    <a href="/tdee" class="homepage-button">Calculate your TDEE</a> 
 </section>
 
 <section id="activitySearch-view" class="view">
