@@ -227,7 +227,6 @@ nav {
         margin-bottom: 2%; 
     }
 
-
     .thumbnail-activity{
         display: inline;
         width: 400px;
@@ -324,5 +323,22 @@ nav {
         font-size: 1.5em;
         margin-bottom: 4%;
         margin-left: .25%;
+    }
+
+    .save-recipe, .delete-recipe{
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        width: 28%;
+        height: 4%;
+        border-radius: 15px 0px 0px 0px;
+        background-color: #5fb4d4;
+        border: none;
+        color: white;
+        padding: 1.5px 3.2px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.15em;
     }
 }

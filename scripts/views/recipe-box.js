@@ -22,6 +22,7 @@ var app = app || {};
         $('.save-recipe').hide()
         $('.saved').hide()
 
+
         $('.recipe-div').off().on('click', '.delete-recipe', (e) => {
             const id = $(e.target).data('id')
             let newBox = app.recipeResults.splice(id, 1)
