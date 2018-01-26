@@ -33,14 +33,12 @@ var app = app || {};
     })
     $('.recipe-div').on('click', '.view-more', (e) => {
         const id = $(e.target).data('id')
-        console.log(`clicked id:${id}`)
         $(`#recipe-info-${id}`).slideToggle('slow')
         $(`#show-id-${id}`).hide()
         $(`#quick-view-${id}`).hide()
     })
     $('.recipe-div').on('click', '.view-less', (e) => {
         const id = $(e.target).data('id')
-        console.log(`clicked id:${id}`)
         $(`#recipe-info-${id}`).slideToggle('slow')
         $(`#show-id-${id}`).delay(400).fadeIn('slow')
         $(`#quick-view-${id}`).delay(400).fadeIn('slow')

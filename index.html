@@ -39,9 +39,9 @@
                 <a href="{{url}}" class="url">Make This Meal!</a>
                 <p class="source">Recipe from: {{source}}</p>
                 <button id="show-id-{{id}}" data-id="{{id}}" class="view-less">View Less</button>                
-                <button data-id="{{id}}" id="save-recipe-{{id}}" class="save-recipe">Save Recipe</button>
-                <p class="saved" id="saved-{{id}}">Recipe Saved!</p>
-                <button data-id="{{id}}" class="delete-recipe">Delete Recipe</button>
+                <button data-id="{{id}}" id="save-recipe-{{id}}" class="save-recipe">Save</button>
+                <p class="saved" id="saved-{{id}}">Saved!</p>
+                <button data-id="{{id}}" class="delete-recipe">Delete</button>
             </div>
         </div>        
     </script>
@@ -81,6 +81,22 @@
     <a href="/activity-search" class="homepage-button">Search Activities</a>         
 </div>       
            
+</section>
+
+<section id="tdee-view" class="view">
+    <form>
+        <input type="text" value="age" placeholder="Age">
+        <input type="text" value="height" placeholder="height in inches">
+        <input type="text" value="weight" placeholder="weight in pounds">
+        <select id="activityLevel">
+            <option selected disabled>Select One</option>
+            <option value="sedentary">sedentary</option>
+            <option value="lightly-active">lightly active</option>
+            <option value="moderately-active">moderately active</option>
+            <option value="very-active">very active</option>
+            <option value="extremely-active">extremely active</option>
+        </select>
+    </form>
 </section>
 
 <section id="foodResults-view" class="view">
@@ -147,9 +163,9 @@
 </section>
 
 <section id="activitySearch-view" class="view">
+    <form id="activity-form">
         <p>Pick your favorite style of workout!</p>
         <br>
-    <form>
         <select id="activity-search">
             <option selected disabled>Select One</option>
             <option value="fun">fun</option>

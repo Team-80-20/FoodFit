@@ -35,7 +35,6 @@ var app = app || {};
     
 
     function RecipeObj(item) {
-        console.log(item)
         if (item.recipe) {
             this.label = item.recipe.label
             this.yield = item.recipe.yield
