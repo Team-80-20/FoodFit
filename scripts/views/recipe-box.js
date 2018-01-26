@@ -11,10 +11,6 @@ var app = app || {};
         $('#recipe-box').empty()
         app.recipeResults = []
         let storedRecipe = JSON.parse(localStorage.getItem('recipeBox'))
-        // let parsedRecipe = []
-        // storedRecipe.forEach(item =>{
-        //     parsedRecipe.push(item)
-        // })
         storedRecipe.forEach(recipe => {
             new app.RecipeObj (recipe)
         })
@@ -35,10 +31,8 @@ var app = app || {};
 
         $('.recipe-div').on('click', '.delete-recipe', (e) => {
             const id = $(e.target).data('id')
-            console.log(`deleted id:${id}`)
             let newBox = app.recipeResults.splice(id-1, 1)
             localStorage.setItem('recipeBox', JSON.stringify(newBox))
-            console.log(newBox)
             page('/recipe-box')
         })
     })
