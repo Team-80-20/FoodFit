@@ -38,9 +38,9 @@
                 <a href="{{url}}" class="url">Make This Meal!</a>
                 <p class="source">Recipe from: {{source}}</p>
                 <button id="show-id-{{id}}" data-id="{{id}}" class="view-less">View Less</button>                
-                <button data-id="{{id}}" id="save-recipe-{{id}}" class="save-recipe">Save Recipe</button>
-                <p class="saved" id="saved-{{id}}">Recipe Saved!</p>
-                <button data-id="{{id}}" class="delete-recipe">Delete Recipe</button>
+                <button data-id="{{id}}" id="save-recipe-{{id}}" class="save-recipe">Save</button>
+                <p class="saved" id="saved-{{id}}">Saved!</p>
+                <button data-id="{{id}}" class="delete-recipe">Delete</button>
             </div>
         </div>        
     </script>
@@ -162,9 +162,9 @@
 </section>
 
 <section id="activitySearch-view" class="view">
+    <form id="activity-form">
         <p>Pick your favorite style of workout!</p>
         <br>
-    <form>
         <select id="activity-search">
             <option selected disabled>Select One</option>
             <option value="fun">fun</option>
