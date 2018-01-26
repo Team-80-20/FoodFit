@@ -1,3 +1,7 @@
+if (window.location.pathname !== '/') {
+    page.base('/FoodFit')
+}
+
 page('/*', (ctx, next) => {
     $('.view').hide()
     next()
