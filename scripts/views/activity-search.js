@@ -14,7 +14,7 @@ var app = app || {};
             
             let selection = $('#activity-search').val()
             $('.activity').hide()
-            $(`.${selection}`).slideToggle('fast')
+            $(`.${selection}`).show()
         })
         $view.slideToggle('slow')
     }
