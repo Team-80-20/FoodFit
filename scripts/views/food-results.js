@@ -31,13 +31,14 @@ var app = app || {};
         $(`#save-recipe-${id}`).hide()
         $(`#saved-${id}`).show()
     })
-    $('.recipe-div').on('click', '.view-more', (e) => {
+    $('.recipe-div').one('click', '.view-more', (e) => {
         const id = $(e.target).data('id')
         $(`#recipe-info-${id}`).slideToggle('slow')
         $(`#show-id-${id}`).hide()
         $(`#quick-view-${id}`).hide()
+        console.log(`clicked ${id}`)
     })
-    $('.recipe-div').on('click', '.view-less', (e) => {
+    $('.recipe-div').one('click', '.view-less', (e) => {
         const id = $(e.target).data('id')
         $(`#recipe-info-${id}`).slideToggle('slow')
         $(`#show-id-${id}`).delay(400).fadeIn('slow')
