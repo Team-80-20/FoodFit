@@ -22,13 +22,19 @@ var app = app || {};
         $('.save-recipe').hide()
         $('.saved').hide()
 
+        $('.recipe-div').off().on('click', '.delete-recipe', (e) => {
+            const id = $(e.target).data('id')
+            let newBox = app.recipeResults.splice(id, 1)
+            localStorage.setItem('recipeBox', JSON.stringify(app.recipeResults))
+            page('/recipe-box')
+        })
+
         $('.view-more').off().on('click', (e) => {
             const id = $(e.target).data('id')
             $(`#recipe-info-${id}`).slideToggle('slow')
             $(`#show-id-${id}`).hide()
             $(`#quick-view-${id}`).hide()
         })
-        
         $('.view-less').off().on('click', (e) => {
             const id = $(e.target).data('id')
             $(`#recipe-info-${id}`).stop().slideToggle('slow')
@@ -36,12 +42,6 @@ var app = app || {};
             $(`#quick-view-${id}`).delay(400).fadeIn('slow')
         })
 
-        $('.recipe-div').off().on('click', '.delete-recipe', (e) => {
-            const id = $(e.target).data('id')
-            let newBox = app.recipeResults.splice(id, 1)
-            localStorage.setItem('recipeBox', JSON.stringify(app.recipeResults))
-            page('/recipe-box')
-        })
     })
     $view.slideToggle('slow')
 }
