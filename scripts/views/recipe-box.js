@@ -24,8 +24,8 @@ var app = app || {};
 
         $('.recipe-div').off().on('click', '.delete-recipe', (e) => {
             const id = $(e.target).data('id')
-            let newBox = app.recipeResults.splice(id-1, 1)
-            localStorage.setItem('recipeBox', JSON.stringify(newBox))
+            let newBox = app.recipeResults.splice(id, 1)
+            localStorage.setItem('recipeBox', JSON.stringify(app.recipeResults))
             page('/recipe-box')
         })
 
@@ -34,7 +34,6 @@ var app = app || {};
             $(`#recipe-info-${id}`).slideToggle('slow')
             $(`#show-id-${id}`).hide()
             $(`#quick-view-${id}`).hide()
-            console.log(`clicked ${id}`)
         })
         $('.view-less').off().on('click', (e) => {
             const id = $(e.target).data('id')
