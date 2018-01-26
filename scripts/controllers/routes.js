@@ -23,6 +23,10 @@ page('/recipe-box', () => {
   app.recipeBoxView.init()
 })
 
+page('/tdee', () => {
+  app.tdeeView.init()
+})
+
 page('/activity-search', () => {
     app.activitySearchView.init()
   })
