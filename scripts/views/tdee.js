@@ -29,7 +29,7 @@ var app = app || {};
             bmr = 655 + (4.35 * weight) + (4.7 * height) - (4.7 * age)
         }
         let tdee = bmr * parseFloat($('#activityLevel').val())
-        $('#tdee-answer').text(Math.round(tdee))
+        $('#tdee-answer').text( Math.round(tdee))
         $('#tdee-spot').show()
         }
 
