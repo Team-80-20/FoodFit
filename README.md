@@ -1,12 +1,10 @@
 # FoodFit
-FoodFit's Client Side Repo
 
 **Author**: Ariel Altaras, Devin Cunningham and Ryan Johnson
 
 **Version**: 1.1.0 Our first release of the FoodFit 80/20 applicaiton.
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
 The FoodFit 80/20 app combines the searchability of healthy meal recipies with a variety of creative fitness activities.
 
 This application was designed for the on the go business professional who cares about their health but has little time to consider dinner plans, and physical activity.
@@ -16,15 +14,367 @@ Using the Edamam.com API as our recipe source database, we created a user friend
 This site also includes a variety of fun fitness activities to inspire the user to consider their physical fitness as well as their dietary health. 
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 Creating an app can be as simple or as complex as the designer would like. First, find a well documented API that inspires your creativity. Then build a basic web app that can communicate with your database and return basic JSON data. Next create a mobile first, single page document format to parse your data and build it out to appear to the user as the client or designer intends. Lastly, fix all of the bugs you created along the way and refactor redundent code. Test, fix, repeat until you have a finished product.
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-
+FoodFit uses html, CSS, JavaScript, JQuery, page.js, node.js, express,normalize.css, handlebars, and the Edamam API.
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:-->
+commit 226edeb808242ea2af4a64b9ff7fa3f3611f7484 (HEAD -> master, origin/master, origin/HEAD)
+Merge: 68518a7 21b5960
+Author: DevinTyler26
+Date:   Sat Jan 27 12:37:42 2018 -0800
+
+    Merge pull request #88 from Team-80-20/dc-07
+
+    more spacing on homepage
+
+commit 21b5960d7cd07b26cbeb627acf44635bf861c78f
+Author: devintyler26
+Date:   Sat Jan 27 12:37:16 2018 -0800
+
+    more spacing on homepage
+
+commit 68518a7284621ac799fc7dac88e6d619f95fcc17
+Merge: 962c8e1 1f4d2f5
+Author: DevinTyler26
+Date:   Sat Jan 27 12:35:38 2018 -0800
+
+    Merge pull request #86 from Team-80-20/dc-07
+
+    line breaks and margins
+
+commit 1f4d2f5ce24ed8b124ed293f6a0e7fe4c86d1079
+Author: devintyler26
+Date:   Sat Jan 27 12:35:07 2018 -0800
+
+    line breaks and margins
+
+commit 962c8e1fd6c46c2b88ab37a3350fa03dc57acd58
+Merge: f8b7e52 c3c6f72
+Author: DevinTyler26
+Date:   Sat Jan 27 12:19:18 2018 -0800
+
+    Merge pull request #84 from Team-80-20/dc-07
+
+    fixing some spacing on desktop recipe view
+
+commit c3c6f72b3e53637982964d6b8f05b03022fd66a9
+Author: devintyler26
+Date:   Sat Jan 27 12:18:42 2018 -0800
+
+    fixing some spacing on desktop recipe view
+
+commit f8b7e52461143ff0890614a625395bf6f5b4546d
+Merge: 6543efe 70af4d5
+Author: DevinTyler26
+Date:   Sat Jan 27 11:38:57 2018 -0800
+
+    Merge pull request #82 from Team-80-20/dc-07
+
+    tdee and css
+
+commit 70af4d5b3d30f77b4ca6b138a6358871400fc28c
+Author: devintyler26
+Date:   Sat Jan 27 11:38:34 2018 -0800
+
+    tdee and css
+
+commit 6543efe528d2c1a07415ff60924c2b0d0b2ef3ff
+Merge: dc5a10d a90a5aa
+Author: DevinTyler26
+Date:   Sat Jan 27 11:18:39 2018 -0800
+
+    Merge pull request #80 from Team-80-20/dc-07
+
+    tdee p
+
+commit a90a5aa7a5a54e97b9ba6756817cb7fe7e5bf9b3
+Author: devintyler26
+Date:   Sat Jan 27 11:18:13 2018 -0800
+
+    tdee p
+
+commit dc5a10d5ef31c0ed3ae72bd8916985d4ded1f18c
+Merge: 91a1b85 d3164e7
+Author: DevinTyler26
+Date:   Sat Jan 27 11:13:54 2018 -0800
+
+    Merge pull request #79 from Team-80-20/dc-07
+
+    updating saved button
+
+commit d3164e770662ca9c186cb557b69f71b735e31666
+Author: devintyler26
+Date:   Sat Jan 27 11:13:28 2018 -0800
+
+    updating saved button
+
+commit 91a1b85abe3e8f9be650958f91789b3e5df9c55e
+Merge: a00b448 f9c3c2a
+Author: DevinTyler26
+Date:   Sat Jan 27 10:48:33 2018 -0800
+
+    Merge pull request #77 from Team-80-20/dc-07
+
+    moving favicon
+
+commit f9c3c2a8489605b69694e07bfdbf5748b3ede791
+Author: devintyler26
+Date:   Sat Jan 27 10:47:37 2018 -0800
+
+    moving favicon
+
+commit a00b448946587fad45db2e55252ed7eefbcd74df
+Merge: 3239e30 924d3a4
+Author: DevinTyler26
+Date:   Sat Jan 27 10:27:57 2018 -0800
+
+    Merge pull request #75 from Team-80-20/dc-07
+
+    trying again for favicon
+
+commit 924d3a4ee6c22a39ca7712f015ee78cead64245c
+Author: devintyler26
+Date:   Sat Jan 27 10:27:28 2018 -0800
+
+    trying again for favicon
+
+commit 3239e3061634716d7542433c4220762fa2207681
+Merge: ffd1e42 b000565
+Author: DevinTyler26
+Date:   Sat Jan 27 10:22:14 2018 -0800
+
+    Merge pull request #74 from Team-80-20/dc-07
+
+    trying again to fix favicon
+
+commit b00056501a75511ce2889a681a28bbc3abe4f3a7
+Author: devintyler26
+Date:   Sat Jan 27 10:21:42 2018 -0800
+
+    trying again to fix favicon
+
+commit ffd1e42f19a19eacc227f9c2074868a7cec43ff9
+Merge: 943333d 6604df6
+Author: DevinTyler26
+Date:   Sat Jan 27 10:19:01 2018 -0800
+
+    Merge pull request #72 from Team-80-20/dc-07
+
+    Dc 07
+
+commit 6604df66ef47955bbb54e2e97cda8d296bdabd13
+Author: devintyler26
+Date:   Sat Jan 27 10:17:53 2018 -0800
+
+    fixing favicon
+
+commit 991556c7a5d6400f1567fb1a6af92670219d0425
+Author: devintyler26
+Date:   Sat Jan 27 10:16:03 2018 -0800
+
+    removing console logs
+
+commit 943333dfc21e834710b8bc43e18532f2c148185d
+Merge: 8d1a788 13df32d
+Author: DevinTyler26
+Date:   Sat Jan 27 09:18:00 2018 -0800
+
+    Merge pull request #70 from Team-80-20/dc-07
+
+    redoing background image url
+
+commit 13df32d7698e893ae8f02bf725d540202930c547
+Author: devintyler26
+Date:   Sat Jan 27 09:17:19 2018 -0800
+
+    redoing background image url
+
+commit 8d1a7880c9b86103c07688b9a764917d36a1a2ee
+Merge: 461f395 50fee37
+Author: DevinTyler26
+Date:   Sat Jan 27 09:13:34 2018 -0800
+
+    Merge pull request #69 from Team-80-20/dc-07
+
+    fixing link for TDEE calc
+
+commit 50fee372dfbdaabec54748176eea48e01f6bf3a7
+Author: devintyler26
+Date:   Sat Jan 27 09:13:15 2018 -0800
+
+    hopefully fixing background image
+
+commit 9938a77a22921a0273ab4343acb929f25c5f7862
+Author: devintyler26
+Date:   Sat Jan 27 08:53:40 2018 -0800
+
+    fixing link for TDEE calc
+
+commit 461f395e121c8067c1589f86437c9a497e389076
+Merge: 7b2ced3 d0234b2
+Author: Ariel
+Date:   Thu Jan 25 21:34:19 2018 -0800
+
+    Merge pull request #67 from Team-80-20/rj-07
+
+    Rj 07
+
+commit d0234b20d49e79ec31c7f39aee23814f5650f534
+Merge: 7ba774b cbf170a
+Author: Ariel
+Date:   Thu Jan 25 21:33:27 2018 -0800
+
+    Merge branch 'master' into rj-07
+
+commit 7b2ced360ee2e87ac83de259b04b7f458a57509b
+Merge: cbf170a ef8614b
+Author: Ryan Scott Johnson
+Date:   Thu Jan 25 21:30:42 2018 -0800
+
+    Merge pull request #65 from Team-80-20/aa-07
+
+    fixed view after recipe delete
+
+commit cbf170abf59593f0a5e5d30148bca2eee427f067
+Merge: 0aa5e3c 64b2df8
+Author: Ariel
+Date:   Thu Jan 25 21:29:03 2018 -0800
+
+    Merge pull request #66 from Team-80-20/dc-07
+
+    fixing background image?
+
+commit ef8614b481e11a88cbfc67eb7b2b8933917a577a
+Merge: 4d076f1 0aa5e3c
+Author: Ariel
+Date:   Thu Jan 25 21:28:38 2018 -0800
+
+    Merge branch 'master' into aa-07
+
+commit 64b2df864e46130db95382cf0efd99fe63bdfa1f
+Author: devintyler26
+Date:   Thu Jan 25 21:27:28 2018 -0800
+
+    fixing background image?
+
+commit 4d076f145879d1435684806fcfccbd40904c175c (origin/aa-07, aa-07)
+Author: stariel
+Date:   Thu Jan 25 21:26:13 2018 -0800
+
+    fixed view after recipe delete
+
+commit 0aa5e3cc25e3b9c6910e9488746313704b01f72c
+Merge: e405edd 2565877
+Author: DevinTyler26
+Date:   Thu Jan 25 21:22:21 2018 -0800
+
+    Merge pull request #63 from Team-80-20/dc-07
+
+    changed the size of the background image
+
+commit 25658778e25556c5d04e6f4e741cfbb736cefa7c
+Author: devintyler26
+Date:   Thu Jan 25 21:21:21 2018 -0800
+
+    changed the size of the background image
+
+commit e405edd1529f35e322e7db25582301bc3f741c7b
+Merge: d9f1ee5 de4d0e2
+Author: Ryan Scott Johnson
+Date:   Thu Jan 25 21:10:32 2018 -0800
+
+    Merge pull request #61 from Team-80-20/dc-07
+
+    added . for logo link
+
+commit 7ba774be48e2037b690c08adbb585190cb59ee32
+Author: rjtj2007
+Date:   Thu Jan 25 21:10:02 2018 -0800
+
+    added log to read me
+
+commit de4d0e246052cee6117f326fab9cc03784cb95b8
+Author: devintyler26
+Date:   Thu Jan 25 21:09:41 2018 -0800
+
+    added . for logo link
+
+commit d9f1ee55d163424f20c79af853584fe315bc06ac
+Merge: ecdbbd7 d3d4bc9
+Author: Ryan Scott Johnson
+Date:   Thu Jan 25 21:08:09 2018 -0800
+
+    Merge pull request #59 from Team-80-20/dc-07
+
+    dot in front of some links
+
+commit d3d4bc9551346f49665e7a464e1a987842f4604e
+Author: devintyler26
+Date:   Thu Jan 25 21:06:40 2018 -0800
+
+    dot in front of some links
+
+commit ecdbbd7488029a54da4508929dde6d990f83066d
+Merge: 99e415b edd22a9
+Author: Ariel
+Date:   Thu Jan 25 20:37:48 2018 -0800
+
+    Merge pull request #57 from Team-80-20/dc-07
+
+    bug fixing
+
+commit edd22a9902f5e4d745a69630a9e4e930f514ce72
+Author: devintyler26
+Date:   Thu Jan 25 20:36:59 2018 -0800
+
+    FIXED DANCING BUG
+
+commit 99e415b6644c5db1d6a164953f9c29d308e6d95d
+Merge: 3ae37d7 157b46a
+Author: Ryan Scott Johnson
+Date:   Thu Jan 25 20:36:18 2018 -0800
+
+    Merge pull request #58 from Team-80-20/aa-07
+
+    added base for page.js
+
+commit 157b46a648a72b81c50806878a6d9f1e5d709360
+Author: stariel
+Date:   Thu Jan 25 20:33:40 2018 -0800
+
+    added base for page.js
+
+commit ac493df68fee94b1adeb11e8e8de23ec31b52f21
+Author: devintyler26
+Date:   Thu Jan 25 20:27:54 2018 -0800
+
+    bug fixing
+
+commit 3ae37d7222eb9e4ce29506956ad1aeb3f0bddf8c
+Merge: f310ef0 fbef95b
+Author: Ariel
+Date:   Thu Jan 25 20:22:13 2018 -0800
+
+    Merge pull request #55 from Team-80-20/rj-07
+
+    Rj 07
+
+commit f310ef07c09391f7945df510a3aec05c34960f5c
+Merge: d78ef97 716ae8e
+Author: Ryan Scott Johnson
+Date:   Thu Jan 25 20:19:34 2018 -0800
+
+    Merge pull request #54 from Team-80-20/aa-07
+
+    Aa 07
+
+commit 716ae8ef7a777610ef50d7d0254927695326a1d4
+Author: stariel
+Date:   Thu Jan 25 20:18:57 2018 -0800
+
+    added code to display TDEE
 
 Author: rjtj2007 
 Date:   Thu Jan 25 20:16:26 2018 -0800
