@@ -1,5 +1,4 @@
 # FoodFit
-FoodFit's Client Side Repo
 
 **Author**: Ariel Altaras, Devin Cunningham and Ryan Johnson
 
