@@ -184,7 +184,7 @@ nav {
         width: 100%;
         /* overflow: hidden; */
         height: 130%;
-        background: url('styles/images/foodBackground.png');
+        background: url('images/foodBackground.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: bottom;  
