@@ -36,7 +36,6 @@ var app = app || {};
         $(`#recipe-info-${id}`).slideToggle('slow')
         $(`#show-id-${id}`).hide()
         $(`#quick-view-${id}`).hide()
-        console.log(`clicked ${id}`)
     })
     $('.view-less').off().on('click', (e) => {
         const id = $(e.target).data('id')
